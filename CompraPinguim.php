@@ -104,7 +104,7 @@ while ($linhas = $comando->fetch() )
             <div class="outros2"> <img src="imagem/pinguim 3.png" width="60%"></div>
             <div class="outros3"> <img src="imagem/pinguin4.png" width="60%"></div>
         </div>
-        <div class="imagemprincipal"><img src="imagem/Pinguim Gordo" width="60%"></div>
+        <div class="imagemprincipal"><img src="imagem/Pinguim Gordo.png" width="60%"></div>
     </div>
     <div class="direita">
         <div class="nome"><b>Pinguim Gordo</b></div>
