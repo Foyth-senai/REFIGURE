@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21-Jun-2023 às 17:12
+-- Tempo de geração: 22-Jun-2023 às 14:26
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -50,7 +50,7 @@ CREATE TABLE `cadastro` (
 
 INSERT INTO `cadastro` (`id_cliente`, `nome_cliente`, `cpf_cliente`, `email_cliente`, `celular_cliente`, `senha_cliente`, `admin`, `logado`, `rua`, `numero_local`, `complementos`, `cidade`, `estado`, `pais`) VALUES
 (1, 'Jônatas Rocha dos Santos', '113.719.458-13', 'jonatasarcaro943@gmail.com', '47 98919-0438', '12341234', 1, 0, '', 0, '', '', '', ''),
-(2, 'Cauê Marchi Foyth', '125.413.329-12', 'foythcaue@gmail.com', '47 98823-0585', '12345678', 1, 1, '', 0, '', '', '', ''),
+(2, 'Cauê Marchi Foyth', '125.413.329-12', 'foythcaue@gmail.com', '47 98823-0585', '12345678', 1, 1, 'Egon Tanner', 180, 'Casa', 'Joinville', 'SC', 'Brasil'),
 (3, 'Lucas Giovani Fruck', '071.524.669-04', 'lucas.f.giovani@gmail.com', '47 98908-0795', '87654321', 1, 0, '', 0, '', '', '', '');
 
 -- --------------------------------------------------------

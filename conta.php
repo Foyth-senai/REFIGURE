@@ -21,6 +21,7 @@ while ($linhas = $comando->fetch() )
     <link rel="stylesheet" type="text/css" href="css/conta.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="icon" href="imagem/RE FIGURE.png">
 </head>
 <body>
     
@@ -40,6 +41,7 @@ while ($linhas = $comando->fetch() )
                  $cpf = $linhas["cpf_cliente"]; // Nome da coluna XAMPP
                  $email = $linhas["email_cliente"]; // Nome da coluna XAMPP
                  $celular = $linhas["celular_cliente"]; // Nome da coluna XAMPP
+
              }?>
 
 <div class="informacao">
