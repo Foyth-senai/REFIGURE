@@ -3,6 +3,11 @@ function Logo()
   window.location.replace("index.html")
 };
 
+function Logo1()
+{
+  window.location.replace("logado2.php")
+};
+
 /* Abre e fecha menu lateral em modo mobile */
 
 const menuMobile = document.querySelector(".menu-mobile");
@@ -67,8 +72,72 @@ function myFunction() {
     window.location.replace ('login.php')
   }
 }
-
-function entrar()
+function lancamentos()
 {
-  window.location.replace("login.php")
+  window.location.replace("lancamentos.html")
+}
+
+function categorias()
+{
+  window.location.replace("categorias.html")
+};
+
+function filamento()
+{
+  window.location.replace("filamento.html")
+};
+
+function termos()
+{
+  window.location.replace("termos.html")
+};
+
+function suporte()
+{
+  window.location.replace("suporte.html")
+};
+
+function p1()
+{
+  window.location.replace("compraUrubu.php")
+};
+
+function p2()
+{
+  window.location.replace("CompraBurgues.php")
+};
+
+function p3()
+{
+  window.location.replace("CompraCapitao.php")
+};
+
+function p4()
+{
+  window.location.replace("CompraMago.php")
+};
+
+function p5()
+{
+  window.location.replace("CompraPirata.php")
+};
+
+function p6()
+{
+  window.location.replace("CompraRobo.php")
+};
+
+function p7()
+{
+  window.location.replace("CompraDino.php")
+};
+
+function p8()
+{
+  window.location.replace("CompraMamute.php")
+};
+
+function p9()
+{
+  window.location.replace("CompraRuivo.php")
 };
