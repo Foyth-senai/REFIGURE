@@ -19,7 +19,7 @@ while ($linhas = $comando->fetch() )
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <title>Re:Figure</title>
-    <link rel="stylesheet" type="text/css" href="css/conta.css">
+    <link rel="stylesheet" type="text/css" href="css/senha.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -53,67 +53,24 @@ while ($linhas = $comando->fetch() )
              }?>
 
 <div class="informacao">
-    <form class="area">
-        <div class="minhaconta"><h1 ><ion-icon class="icone" name="person-circle-outline"></ion-icon><b>Minha Conta</b></h1></div>
+    <form class="area" action="senha.php" method="post">
+        <div class="minhaconta"><h1 ><ion-icon class="icone" name="person-circle-outline"></ion-icon><b>Alterar senha</b></h1></div>
         <div class="informacoes">
-        <h2><b>Informações de Acesso</b></h2>
-        <h3><?php echo($nome); ?></h3>
-        <h4><?php echo($email); ?></h4>
+        <h2><b>Insira o seu CPF e altere sua senha</b></h2>
+        <input placeholder="Insira seu CPF" class="input-style" type="text">
+        <input placeholder="Insira sua senha atual" class="input-style" type="text">
+        <input placeholder="Insira sua senha nova" class="input-style" type="text">
+        <input placeholder="Confirme sua senha" class="input-style" type="text">   
         </div>
+        <br> <br>
         <div class="botoesalterar">
         <button class="btn1"><b>Editar</b></button>
-        <br>
-        <button class="btn1"><b>Mudar Senha</b></button>
         </div>
-        <br> <br> <br>
-        <div class="enderecotitulo"><ion-icon class="icone" name="location-outline"></ion-icon><b>Endereços Cadastrados</b><button class="btn2"><b>Gerenciar Endereços</b></button></div>
-        <br>
-        <div class="enderecos">
-            <h1><b>Endereço de Cobrança Padrão</b></h1>
-            <h2><?php echo($nome); ?></h2>
-            <h2>(<?php echo($rua); ?>, <?php echo($numero); ?>, <?php echo($complementos); ?>)</h2>
-            <h2>(<?php echo($cidade); ?>, <?php echo($estado); ?>, <?php echo($pais); ?>)</h2>
-            <h2>Tel: <?php echo($celular); ?></h2>
-        </div>
-        <br>
-        <div class="meuspedidostitulo"><ion-icon class="icone" name="list-outline"></ion-icon><b>Meus Pedidos</b></div>
-        <br>
-        <table class="tabela">
-        <tr>
-            <td><b>#</b></td>
-            <td><b>Data</b></td>
-            <td><b>Método</b></td>
-            <td><b>Valor Total</b></td>   
-            <td><b>Status</b></td>
-        </tr>
+    </form>   
 
-        <tr>
-            <td>(id)</td>
-            <td>(Data e Hora)</td>
-            <td>(Método de Pagamento)</td>
-            <td>(R$ 000,00)</td>   
-            <td>Enviado</td>
-        </tr>
-        <tr>
-            <td>(id)</td>
-            <td>(Data e Hora)</td>
-            <td>(Método de Pagamento)</td>
-            <td>(R$ 000,00)</td>   
-            <td>Entrege</td>
-        </tr>
-        <tr>
-            <td>(id)</td>
-            <td>(Data e Hora)</td>
-            <td>(Método de Pagamento)</td>
-            <td>(R$ 000,00)</td>   
-            <td>Cancelado</td>
-        </tr>
-    </table>
-    <div class="invisivel"></div>
-    </form>
 </div>
 
-<main>
+<footer>
 <section id="rodape" class="m-0 p-0 mt-5">
           <div class="alinharrow row">
             <div class="alinhamentodalogo col-md-3">
@@ -142,7 +99,7 @@ while ($linhas = $comando->fetch() )
           </div>
 
 </section>
-</main>
+</footer>
 <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="js/conta.js"></script>
 </body>

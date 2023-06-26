@@ -156,6 +156,22 @@ body
     justify-content: space-evenly;
     align-items: start;
 }
+.input-style {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+    margin-top: 3%;
+    margin-bottom: 2%;
+  }
+  
+  .input-style:focus {
+    border-color: rgb(0, 146, 0);
+    box-shadow: 0 0 0 0.2rem rgb(95, 228, 115);
+  }
+  
 
 .botoesalterar
 {
@@ -163,7 +179,7 @@ body
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 30%;
+    width: 100%;
     align-items: start;
     margin: 5px;
 }
@@ -194,32 +210,6 @@ body
     transform: scale(0.95);
   }
 
-  .btn2 {
-    width: fit-content;
-    min-width: 100px;
-    height: 35px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2.5px solid hwb(165 61% 34%, 50%);
-    box-shadow: 0px 0px 20px -20px;
-    cursor: pointer;
-    background-color: hsl(120, 64%, 47%, 50%);;
-    transition: all 0.2s ease-in-out 0ms;
-    user-select: none;
-    font-family: 'Poppins', sans-serif;
-    margin-left: 2%;
-    margin-top: -0.5%;
-    font-size: small;
-  }
-  
-  .btn2:hover {
-    background-color: #F2F2F2;
-    box-shadow: 0px 0px 20px -18px;
-  }
-  
-  .btn2:active {
-    transform: scale(0.95);
-  }
 
 .minhaconta
 {
@@ -230,60 +220,8 @@ body
     justify-content: center;
 }
 
-.enderecotitulo
-{
-    display: flex;
-    justify-content: start;
-    align-self: center;
-    width: 100%;
-    height: auto;
-    margin-left: 12%;
-    font-size: 25px;    
-}
-
-.enderecos
-{
-    width: 100%;
-    margin-left: 6%;
-    height: auto;
-}
-
-.enderecos h1
-{
-    font-size: 25px;
-}
-
-.enderecos h2
-{
-    font-size: 15px;
-}
-
-.meuspedidostitulo
-{
-    display: flex;
-    justify-content: start;
-    align-self: center;
-    width: 100%;
-    height: auto;
-    margin-left: 12%;
-    font-size: 25px;   
-}
-
-.tabela td
-{
-    border-style: solid;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-width: 1px;
-    border-color: hsla(120, 86%, 28%, 0.5);
-}
-
-.tabela
-{
-    height: 20vh;
-    justify-content: center;
-    margin-bottom: 5%;
+footer{
+    margin-top: 26vh;
 }
 .delete
 {

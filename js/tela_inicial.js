@@ -1,6 +1,6 @@
 function Logo()
 {
-  window.location.replace("index2.html")
+  window.location.replace("index.html")
 };
 
 /* Abre e fecha menu lateral em modo mobile */
