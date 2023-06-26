@@ -42,7 +42,7 @@ while ($linhas = $comando->fetch() )
                   $conta = "Conta";
                   if(isset($_POST["botao"]) )
                   {
-                    ?><script>window.location.replace("conta.html");</script><?php
+                    ?><script>window.location.replace("conta.php");</script><?php
                   }
                 } else{
                   $conta = "Entrar";

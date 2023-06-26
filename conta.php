@@ -41,6 +41,12 @@ while ($linhas = $comando->fetch() )
                  $cpf = $linhas["cpf_cliente"]; // Nome da coluna XAMPP
                  $email = $linhas["email_cliente"]; // Nome da coluna XAMPP
                  $celular = $linhas["celular_cliente"]; // Nome da coluna XAMPP
+                 $rua = $linhas["rua"]; // Nome da coluna XAMPP
+                 $numero = $linhas["numero_local"]; // Nome da coluna XAMPP
+                 $complementos = $linhas["complementos"]; // Nome da coluna XAMPP
+                 $estado = $linhas["estado"]; // Nome da coluna XAMPP
+                 $cidade = $linhas["cidade"]; // Nome da coluna XAMPP
+                 $pais = $linhas["pais"]; // Nome da coluna XAMPP
 
              }?>
 
@@ -63,8 +69,8 @@ while ($linhas = $comando->fetch() )
         <div class="enderecos">
             <h1><b>Endereço de Cobrança Padrão</b></h1>
             <h2><?php echo($nome); ?></h2>
-            <h2>(Nome da rua, número e detalhes)</h2>
-            <h2>(Cidade,Estado, BR - (CEP))</h2>
+            <h2>(<?php echo($rua); ?>, <?php echo($numero); ?>, <?php echo($complementos); ?>)</h2>
+            <h2>(<?php echo($cidade); ?>, <?php echo($estado); ?>, <?php echo($pais); ?>)</h2>
             <h2>Tel: <?php echo($celular); ?></h2>
         </div>
         <br>
