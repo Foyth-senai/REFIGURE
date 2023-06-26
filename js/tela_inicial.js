@@ -1,6 +1,6 @@
 function Logo()
 {
-  window.location.replace("logado.php")
+  window.location.replace("index2.html")
 };
 
 /* Abre e fecha menu lateral em modo mobile */
@@ -59,4 +59,16 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+};
+
+function myFunction() {
+  let text = "Para continuar você precisa estar logado";
+  if (confirm(text) == true) {
+    window.location.replace ('login.php')
+  }
+}
+
+function entrar()
+{
+  window.location.replace("login.php")
 };
