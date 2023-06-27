@@ -49,6 +49,7 @@ while ($linhas = $comando->fetch() )
                  $estado = $linhas["estado"]; // Nome da coluna XAMPP
                  $cidade = $linhas["cidade"]; // Nome da coluna XAMPP
                  $pais = $linhas["pais"]; // Nome da coluna XAMPP
+                 $bairro = $linhas["bairro"]; // Nome da coluna XAMPP
 
              }?>
 
@@ -76,15 +77,21 @@ while ($linhas = $comando->fetch() )
           }
         ?>
         <br> <br> <br>
-        <div class="enderecotitulo"><ion-icon class="icone" name="location-outline"></ion-icon><b>Endereços Cadastrados</b><button class="btn2"><b>Gerenciar Endereços</b></button></div>
+        <div class="enderecotitulo"><ion-icon class="icone" name="location-outline"></ion-icon><b>Endereços Cadastrados</b><button class="btn2" name="endereco" type="subimt"><b>Gerenciar Endereços</b></button></div>
         <br>
         <div class="enderecos">
             <h1><b>Endereço de Cobrança Padrão</b></h1>
             <h2><?php echo($nome); ?></h2>
-            <h2>(<?php echo($rua); ?>, <?php echo($numero); ?>, <?php echo($complementos); ?>)</h2>
+            <h2>(<?php echo($rua); ?>, <?php echo($numero); ?>, <?php echo($complementos); ?>, <?php echo($bairro); ?>)</h2>
             <h2>(<?php echo($cidade); ?>, <?php echo($estado); ?>, <?php echo($pais); ?>)</h2>
             <h2>Tel: <?php echo($celular); ?></h2>
         </div>
+        <?php 
+          if(isset($_POST["endereco"]) )
+          {
+            header("Location:enderecos.php");
+          }
+        ?>
         <br>
         <div class="meuspedidostitulo"><ion-icon class="icone" name="list-outline"></ion-icon><b>Meus Pedidos</b></div>
         <br>

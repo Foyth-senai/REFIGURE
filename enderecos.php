@@ -35,14 +35,24 @@ while ($linhas = $comando->fetch() )
     </div>
 
 <div class="informacao">
-    <form class="area" action="editar.php" method="post">
-        <div class="minhaconta"><h1 ><ion-icon class="icone" name="person-circle-outline"></ion-icon><b>Editar Informações</b></h1></div>
-        <div class="informacoes">
+    <form class="area" action="enderecos.php" method="post">
+        <div class="minhaconta"><h1 ><ion-icon class="icone" name="person-circle-outline"></ion-icon><b>Alterar senha</b></h1></div>
+        <div class="informacoes w-100">
         <h2><b>Insira o seu CPF e altere sua senha</b></h2>
-        <input maxlength="14" id="cpf" onkeyup="ValidarCPF();" placeholder="Insira seu CPF" name="cpf_alterar" class="input-style" type="text">
-        <input placeholder="Insira o novo nome" name="nome_novo" class="input-style" type="text">
-        <input placeholder="Insira o novo email" name="email_novo" class="input-style" type="text">
-        <input placeholder="Insira o novo telefone" name="telefone_novo" class="input-style" maxlength="13" type="text" id="Telefone" onkeyup="ValidarTelefone();">
+        <div class="row w-100 d-flex justify-content-center">
+            <div class="col-md-5">
+                <input maxlength="14" id="cpf" onkeyup="ValidarCPF();" placeholder="Insira seu CPF" name="cpf_alterar" class="input-style" type="text">
+                <input placeholder="Insira a nova rua" name="rua_nova" class="input-style" type="text">
+                <input placeholder="Novo número da casa" name="numero_novo" class="input-style" type="text">
+                <input placeholder="Insira complementos" name="complementos_novo" class="input-style" type="text">
+            </div>
+            <div class="col-md-5 ms-5">
+                <input placeholder="Insira a cidade" name="cidade_novo" class="input-style" type="text">
+                <input placeholder="Insira o estado" name="estado_novo" class="input-style" type="text">
+                <input placeholder="Insira o país" name="pais_novo" class="input-style" type="text">
+                <input placeholder="Insira o bairro" name="bairro_novo" class="input-style" type="text">
+            </div>
+        </div>
         </div>
         <br> <br>
         <div class="botoesalterar">
@@ -65,25 +75,43 @@ while ($linhas = $comando->fetch() )
         $estado = $linhas["estado"]; // Nome da coluna XAMPP
         $cidade = $linhas["cidade"]; // Nome da coluna XAMPP
         $pais = $linhas["pais"]; // Nome da coluna XAMPP
+        $bairro = $linhas["bairro"]; // Nome da coluna XAMPP
 
     }
 
        if(isset($_POST["editar"]) )
        {
           $cpf_alterar = $_POST["cpf_alterar"];
-          $nome_novo = $_POST["nome_novo"];
-          $email_novo = $_POST["email_novo"];
-          $telefone_novo = $_POST["telefone_novo"];
-          if($nome_novo == ""){
-            $nome_novo = $nome;
+          $rua_nova = $_POST["rua_nova"];
+          $numero_novo = $_POST["numero_novo"];
+          $complementos_novo = $_POST["complementos_novo"];
+          $cidade_novo = $_POST["cidade_novo"];
+          $estado_novo = $_POST["estado_novo"];
+          $pais_novo = $_POST["pais_novo"];
+          $bairro_novo = $_POST["bairro_novo"];
+
+          if($rua_nova == ""){
+            $rua_nova = $rua;
           }
-          if($email_novo == ""){
-            $email_novo = $email;
+          if($numero_novo == ""){
+            $numero_novo = $numero;
           }
-          if($telefone_novo == ""){
-            $telefone_novo = $celular;
+          if($complementos_novo == ""){
+            $complementos_novo = $complementos;
           }
-           $comando = $pdo->prepare("UPDATE cadastro SET nome_cliente='$nome_novo', email_cliente='$email_novo', celular_cliente='$telefone_novo' WHERE cpf_cliente='$cpf_alterar'");
+          if($cidade_novo == ""){
+            $cidade_novo = $cidade;
+          }
+          if($estado_novo == ""){
+            $estado_novo = $estado;
+          }
+          if($pais_novo == ""){
+            $pais_novo = $pais;
+          }
+          if($bairro_novo == ""){
+            $bairro_novo = $bairro;
+          }
+           $comando = $pdo->prepare("UPDATE cadastro SET rua='$rua_nova', numero_local=$numero_novo, complementos='$complementos_novo', cidade='$cidade_novo', estado='$estado_novo', pais='$pais_novo', bairro='$bairro_novo' WHERE cpf_cliente='$cpf_alterar'");
            $resultado = $comando->execute();
            header("Location:conta.php");
        }
