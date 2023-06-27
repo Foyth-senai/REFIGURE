@@ -71,22 +71,22 @@ include("conecta.php");
                 <tr class="giovani">
                 <td class="prime"><?php echo ('<img class="img" src="imagem/'.$nome.'.png" >'); echo($nome);?></td>
                 <td class="segu"><p>R$<?php echo($preco); ?></p></td>
-                <td class="quar"><form action="carrinho.php" method="post"><button type="submit" name="menos" class="mb-3 me-2">&#9866;</button><p><?php echo($qtd);
-                if(isset($_POST["menos"])){
-                    $comando = $pdo->prepare("UPDATE produtos SET qtd_produto=(qtd_produto-1 where nome_cliente='$nome')");
-                    $resultado = $comando->execute();
-                    header("Location:carrinho.php");
-                }
-                if(isset($_POST["mais"])){
-                    $comando = $pdo->prepare("UPDATE produtos SET qtd_produto=(qtd_produto+1)");
-                    $resultado = $comando->execute();
-                    header("Location:carrinho.php");
-                }
-                ?></p><button type="submit" name="mais" class="mb-3 ms-2">&#10010;</button></form></td>
+                <td class="quar"><?php echo($qtd); ?></td>
                 <td class="quin"><p>R$<?php echo($preco_final); ?></p></td>
                 </tr>
                 
-            <?php }
+                
+            <?php 
+                                // $quantidade = $_POST["quantity"];
+                                // if($nome == "Urubu Preto e Branco"){
+                                //     if(isset($_POST["confirmar"])){
+                                //         $comando = $pdo->prepare("UPDATE produtos SET qtd_produto= $quantidade where id_produto=1)");
+                                //         $resultado = $comando->execute();
+                                //         header("Location:carrinho.php");
+                                //     }
+                                // }
+            }   
+            
             ?> 
                     </table>
                 </div>
