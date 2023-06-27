@@ -116,7 +116,7 @@ section#cabecalho
     overflow-y: auto;
     height: 260px;
     display: block;
-    background: gray;
+    background: hsl(0, 0%, 50%, 10%);
 }
 
 .tabela2
@@ -373,4 +373,94 @@ section#cabecalho
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+}
+
+table
+{
+    width: 100%;
+    height: 100%;
+}
+
+tbody
+{
+    width: 100%;
+    height: 100%;
+}
+
+.giovani
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.prime
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32%;
+    height: 260px;
+    flex-direction: column;
+    border-bottom: solid 2px;
+    border-left: solid 2px;
+}
+
+.segu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21%;
+    height: 260px;
+    border-bottom: solid 2px;
+}
+
+.quar
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21%;
+    height: 260px;
+    border-bottom: solid 2px;
+}
+
+.quin
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 260px;
+    border-bottom: solid 2px;
+}
+
+.img
+{
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* Estilização da scrollbar */
+*::-webkit-scrollbar
+{
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track
+{
+    width: 12px;
+    box-shadow: inset 0 0 .3rem #000050;
+    background-color: #fff;
+}
+
+*::-webkit-scrollbar-thumb
+{
+    background-color:rgb(95, 228, 115);
+    border-radius: 5px;
+    border: solid 1px;
 }

@@ -65,7 +65,7 @@ while ($linhas = $comando->fetch() )
 
             <div class="cantologo col-md-4 d-flex justify-content-start align-itens-center text-align-center">
 
-                <img class="logo" id="logo" onclick="Logo()" src="imagem/RE FIGURE.png">
+                <img class="logo" id="logo" onclick="Logo1()" src="imagem/RE FIGURE.png">
 
             </div>
             <div class="nome canto col-md-4">

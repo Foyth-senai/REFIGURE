@@ -18,7 +18,7 @@ include("conecta.php");
 
     <div class="cantologo col-md-4 d-flex justify-content-start align-itens-center text-align-center">
 
-        <img class="logo" id="logo" onclick="Logo()" src="imagem/RE FIGURE.png">
+        <img class="logo" id="logo" onclick="Logo1()" src="imagem/RE FIGURE.png">
 
     </div>
     <div class="nome canto col-md-4">
@@ -69,13 +69,25 @@ include("conecta.php");
                  $total = number_format($final2, 2, ',', ' ');
                 ?>
                 <tr class="giovani">
-                <td><?php echo ('<img src="imagem/'.$nome.'.png" >'); ?></td>
-                <td><?php echo($nome); ?></td>
-                <td><p>R$</p><?php echo($preco); ?></td>
-                <td><?php echo($qtd); ?> </td>
-                <td><p>R$</p><?php echo($preco_final); ?></td>
+                <td class="prime"><?php echo ('<img class="img" src="imagem/'.$nome.'.png" >'); echo($nome);?></td>
+                <td class="segu"><p>R$<?php echo($preco); ?></p></td>
+                <td class="quar"><form action="carrinho.php" method="post"><button type="submit" name="menos" class="mb-3 me-2">&#9866;</button><p><?php echo($qtd);
+                if(isset($_POST["menos"])){
+                    $comando = $pdo->prepare("UPDATE produtos SET qtd_produto=(qtd_produto-1 where nome_cliente='$nome')");
+                    $resultado = $comando->execute();
+                    header("Location:carrinho.php");
+                }
+                if(isset($_POST["mais"])){
+                    $comando = $pdo->prepare("UPDATE produtos SET qtd_produto=(qtd_produto+1)");
+                    $resultado = $comando->execute();
+                    header("Location:carrinho.php");
+                }
+                ?></p><button type="submit" name="mais" class="mb-3 ms-2">&#10010;</button></form></td>
+                <td class="quin"><p>R$<?php echo($preco_final); ?></p></td>
                 </tr>
-            <?php } ?> 
+                
+            <?php }
+            ?> 
                     </table>
                 </div>
                 <div class="alinharentrega mt-4">
@@ -122,6 +134,10 @@ include("conecta.php");
     </div>
 
 </section>
+
+
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="./js/carrinho.js"></script>
 
 </body>
 </html>
