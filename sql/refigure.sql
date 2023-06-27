@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Jun-2023 às 14:26
+-- Tempo de geração: 27-Jun-2023 às 13:58
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -50,7 +50,7 @@ CREATE TABLE `cadastro` (
 
 INSERT INTO `cadastro` (`id_cliente`, `nome_cliente`, `cpf_cliente`, `email_cliente`, `celular_cliente`, `senha_cliente`, `admin`, `logado`, `rua`, `numero_local`, `complementos`, `cidade`, `estado`, `pais`) VALUES
 (1, 'Jônatas Rocha dos Santos', '113.719.458-13', 'jonatasarcaro943@gmail.com', '47 98919-0438', '12341234', 1, 0, '', 0, '', '', '', ''),
-(2, 'Cauê Marchi Foyth', '125.413.329-12', 'foythcaue@gmail.com', '47 98823-0585', '12345678', 1, 1, 'Egon Tanner', 180, 'Casa', 'Joinville', 'SC', 'Brasil'),
+(2, 'Cauê Marchi Foyth', '125.413.329-12', 'foythcaue@gmail.com', '47 98823-0585', '12345678', 1, 0, 'Egon Tanner', 180, 'Casa', 'Joinville', 'SC', 'Brasil'),
 (3, 'Lucas Giovani Fruck', '071.524.669-04', 'lucas.f.giovani@gmail.com', '47 98908-0795', '87654321', 1, 0, '', 0, '', '', '', '');
 
 -- --------------------------------------------------------
@@ -73,9 +73,9 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`id_produto`, `nome_produto`, `preco_produto`, `qtd_produto`, `carrinho`, `preco_final`) VALUES
-(1, 'Urubu Preto e Branco', 70.00, 1, 0, 70.00),
+(1, 'Urubu Preto e Branco', 70.00, 1, 1, 70.00),
 (2, 'Burguês Preto e Branco', 60.00, 1, 0, 60.00),
-(3, 'Capitão Picanha', 130.00, 1, 0, 130.00),
+(3, 'Capitão Picanha', 130.00, 1, 1, 130.00),
 (4, 'Mago Cósmico', 150.00, 1, 0, 150.00),
 (5, 'Pirata Narigudo', 140.00, 1, 0, 140.00),
 (6, 'Robo Calcinha', 69.69, 1, 0, 69.69),
@@ -85,7 +85,9 @@ INSERT INTO `produtos` (`id_produto`, `nome_produto`, `preco_produto`, `qtd_prod
 (10, 'Mumia Mommy', 97.00, 1, 0, 97.00),
 (11, 'Tutubarão', 170.00, 1, 0, 170.00),
 (12, 'Pinguim Gordo', 120.00, 1, 0, 120.00),
-(13, 'Gato Chato', 120.00, 1, 0, 120.00);
+(13, 'Gato Chato', 120.00, 1, 0, 120.00),
+(14, 'Monstro Larry', 130.00, 1, 0, 130.00),
+(15, 'Ogro Chogro', 280.00, 1, 0, 280.00);
 
 --
 -- Índices para tabelas despejadas
@@ -117,7 +119,7 @@ ALTER TABLE `cadastro`
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

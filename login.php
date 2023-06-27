@@ -35,7 +35,7 @@ include("conecta.php");
                     <span><ion-icon class="imgs" name="lock-closed-outline"></ion-icon><b>Senha</b></span>
                     <input type="password" name="confirmar_senha" class="formatar" placeholder="Coloque sua senha">
                 </div>
-                <a class="esqueceu" href="senha.php"><b>Esqueceu sua senha?</b></a>
+                <a class="esqueceu" href="senhaEsqueceu.php"><b>Esqueceu sua senha?</b></a>
                 <a class="conta" href="Cadastro.html"><b>Não tem conta?</b></a>
                 <button name="entrar" type="submit" class="entrarbotao" onclick="exibeAlert()">Entrar</button>
             </div>

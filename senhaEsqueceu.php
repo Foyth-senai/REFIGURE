@@ -40,7 +40,6 @@ while ($linhas = $comando->fetch() )
         <div class="informacoes">
         <h2><b>Insira o seu CPF e altere sua senha</b></h2>
         <input maxlength="14" id="cpf" onkeyup="ValidarCPF();" placeholder="Insira seu CPF" name="cpf_alterar" class="input-style" type="text">
-        <input placeholder="Insira sua senha atual" name="senha_antiga" class="input-style" type="text">
         <input placeholder="Insira sua senha nova" name="senha_nova" class="input-style" type="text">
         </div>
         <br> <br>

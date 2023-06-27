@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body> 
 
     <i class="bi bi-list menu-mobile"></i>
 
@@ -101,18 +101,28 @@
                 <b onclick="myFunction()" style="cursor: pointer;">Suporte</b>
             </div>
 
+            
         </section>
 
-        <section>
+        <section> <!--categorias-->
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 d-flex justify-content-center titulo">
                         <h1>CATEGORIAS</h1> 
                     </div>
-                    <div class="row d-flex justify-content-around">                    
-                        <div class="col-md-4 d-flex justify-content-center card_1 mt-5">a</div>
-                        <div class="col-md-4 d-flex justify-content-center card_2 mt-5">b</div>
-                        <div class="col-md-4 d-flex justify-content-center card_3 mt-5">c</div>
+                    <div class="row d-flex justify-content-around">                
+                        <div onclick="categoriaanimal()" class="col-md-4 d-flex justify-content-center card_1 mt-5"> <!--personagem categorias 1-->
+                            <img src="imagem/personagem8.png" width="260px">
+                            <p>Animais</p>
+                        </div>
+                        <div onclick="categoriaspeb()" class="col-md-4 d-flex justify-content-center card_2 mt-5"> <!--personagem categorias 2-->
+                            <img src="imagem/personagem2.png" width="250px">
+                            <p>P&B</p>
+                        </div>
+                        <div onclick="categoriascolorido()" class="col-md-4 d-flex justify-content-center card_3 mt-5"> <!--personagem categorias 3--> 
+                            <img src="imagem/personagem3.png" width="260px">
+                            <p>Colorido</p>
+                        </div>
                     </div>    
                 </div>
             </div>
@@ -153,4 +163,4 @@
     <script src="js/tela_inicial.js"></script>
 </body>
 
-</html>
+</html> 
