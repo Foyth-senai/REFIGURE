@@ -1,3 +1,13 @@
+function esqueceu()
+{
+  window.location.replace("senhaEsqueceu.php")
+};
+
+function cadastro()
+{
+  window.location.replace("Cadastro.html")
+};
+
 function Conta()
 {
   window.location.replace("conta.php")

@@ -35,7 +35,7 @@ while ($linhas = $comando->fetch() )
         <nav id="navbar" class="nav-menu"> <!--navbar lateral-->
             <ul class="nav flex-column"> <!--Lista em column-->
                 <li class="nav-item">
-                    <a class="nav-link" href="logado2.php"><i class="bi bi-house"></i>Inicio</a>
+                    <a class="nav-link" href="logado.php"><i class="bi bi-house"></i>Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login.php"><i class="bi bi-person"></i>Entrar</a>
@@ -190,7 +190,7 @@ while ($linhas = $comando->fetch() )
                               <a onclick="p3()" style="cursor: pointer;" class="comprar">Comprar</a>
                             </div>
                           </div>
-                  
+          
                     </div>
                     <div class="alinhamento col-md-4">
                         <div class="card">

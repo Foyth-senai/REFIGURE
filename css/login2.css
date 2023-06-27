@@ -2,9 +2,180 @@ html, body
 {
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    overflow: hidden
 }
 
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+	font-family: Raleway, sans-serif;
+}
+
+body {
+	background-color: #fff;	
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    width: 100%;
+    height: 80%;
+}
+
+.screen {		
+	background: linear-gradient(90deg, #4cffc9, #58fd89);		
+	position: relative;	
+	height: 100%;
+	width: 360px;	
+	box-shadow: 0px 0px 24px #000000;
+}
+
+.screen__content {
+	z-index: 1;
+	position: relative;	
+	height: 100%;
+}
+
+.screen__background {		
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);	
+}
+
+.screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.screen__background__shape1 {
+	height: 520px;
+	width: 520px;
+	background: #FFF;	
+	top: -50px;
+	right: 120px;	
+	border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+	height: 220px;
+	width: 220px;
+	background: #0c6803;	
+	top: -172px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape3 {
+	height: 540px;
+	width: 190px;
+	background-color: #0c6803;;
+	top: -24px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape4 {
+	height: 400px;
+	width: 200px;
+	background: #0c6803;;	
+	top: 420px;
+	right: 50px;	
+	border-radius: 60px;
+}
+
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 55px;
+    margin-left: 20px;
+}
+
+.login__field {
+	padding: 20px 0px;	
+	position: relative;	
+}
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: #0c6803;;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #0c6803;;
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #0c6803;;
+	box-shadow: 0px 2px 2px #0c6803;;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #0c6803;;
+	outline: none;
+}
+
+.olar
+{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: -20px;
+}
+
+.olar button
+{
+    width: 49%;
+    font-size: 13px;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: #7875B5;
+}
 #aside /*Menu lateral*/
 {
     position: fixed;
@@ -92,6 +263,15 @@ i.menu-mobile
     left: 0;
 }
 
+#area
+{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .canto
 {
     display: flex;
@@ -117,20 +297,6 @@ i.menu-mobile
   height: auto;
 }
 
-.fundo{
-  width: 100%;
-  height: 300px;
-}
-
-.tablet
-{
-    display: none;
-}
-
-.celular
-{
-    display: none;
-}
 .delete
 {
   display: flex;
@@ -225,26 +391,10 @@ i.menu-mobile
       justify-content: space-between;
       display: flex;
     }
-    .tablet
-    {
-        display: flex;
-    }
-    .pc
-    {
-        display: none;
-    }
 }
 
 @media (max-width: 768px)
 {
-  .celular
-  {
-      display: flex;
-  }
-  .tablet
-  {
-      display: none;
-  }
   .fundo_fila_680
   {
     display: flex;
@@ -428,9 +578,8 @@ section#cabecalho
   }
 
  .slideshow-container {
-  min-width: 100%;
-  position: relative;
-  margin: 0;
+    width: 100%;
+    height: 90%;
 }
 
 .mySlides {
@@ -496,39 +645,7 @@ section#cabecalho
   font-family:Arial, Helvetica, sans-serif;
   font-size: larger;
   -webkit-text-stroke: 2px #0d5000;
-}
-
-#supe
-{
-  width: 100%;
-  height: 85vh;
-}
-
-.m321
-{
-  background-color: hsl(145, 100%, 23%, 30%);
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.m321 i
-{
-  color: black;
-}
-
-.m123
-{
-  width: auto;
-  height: auto;
-  background-color: hsl(0, 0%, 50%, 30%);
-  border: solid 1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 4%;
 }
 
 .card {
