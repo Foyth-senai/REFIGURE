@@ -1,36 +1,55 @@
 <?php
 include("conecta.php");
-$total = 0.00;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RE:Figure</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <title>Re:Figure</title>
     <link rel="icon" href="imagem/RE FIGURE.png">
-    <link rel="stylesheet" type="text/css" href="css/carrinho.css">
+    <link rel="stylesheet" type="text/css" href="./css/carrinhon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
+    
+<section id="cabecalho" class="cabecalho alinhamento m-0 p-0">
 
-    <div class="cabecalho">   <!-- Este é o cabeçalho -->
-        <div class="divvoltar"><a href="logado.php"><img src="imagem/botaovoltar.png" class="botaovoltar"></div></a> 
-        <div class="divlogo"><a href="logado.php"><img src="imagem/RE FIGURE.png" class="logo"></div></a>
-        <div class="invisivel"></div> <!-- Div invisivel serve apenas para alinhar e ajustar a responsividade -->
+    <div class="cantologo col-md-4 d-flex justify-content-start align-itens-center text-align-center">
+
+        <img class="logo" id="logo" onclick="Logo()" src="imagem/RE FIGURE.png">
+
     </div>
-    <div class="corpo">
-        <div class="esquerda">
-            <div class="meucarrinho" style="font-size: 25px;"><b>Meu Carrinho</b></div>
-                <div class="tebela1">
+    <div class="nome canto col-md-4">
+        <b>Re:Figure <i class="bi bi-tree"></i></b>
+    </div>  
+    <div class="canto col-md-4 justify-content-end align-itens-center text-align-center">
+
+    </div>
+
+</section>
+
+<section id="carrinho">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <h1><b>Meu Carrinho</b></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="tabela mt-4">
                     <div class="produto"><b>Produto</b></div>
                     <div class="preco"><b>Preço</b></div>
                     <div class="quantidade"><b>Quantidade</b></div>
                     <div class="total"><b>Total</b></div>
                 </div>
-                <div class="tabela">
-                <table>
-        <?php 
+                
+                <div class="tabela1">
+                    <table>
+                    <?php 
              $comando = $pdo->prepare("SELECT * FROM produtos where carrinho = 1");
              $resultado = $comando->execute();
 
@@ -57,12 +76,26 @@ $total = 0.00;
                 <td><p>R$</p><?php echo($preco_final); ?></td>
                 </tr>
             <?php } ?> 
-        </table>
+                    </table>
+                </div>
+                <div class="alinharentrega mt-4">
+        <div class="entrega"><b>Entrega</b> <br>
+            <form action=""> 
+                <div class="styleinput"><input type="number" placeholder="000000.000"></div>
+                <div class="styleinput1"><input type="submit" value="Calcular"></div>
+            </form>
+                <h3 class="fs-4">Saiba se você tem Frete Gratis &nbsp; <i class="bi bi-truck"></i></h3>
         </div>
+        <div class="aplicar"><b>Aplicar código de cupom</b> <br>
+            <form action="">
+                <div class="styleinput"><input type="text" placeholder="Cupom"></div>
+                <div class="styleinput1"><input type="submit" value="Aplicar"></div>
+            </form>
+             </div>
+             </div>
             </div>
-    <div class="direita">
-            <div class="invisible"></div>
-            <div class="tabela3">
+            <div class="col-md-4">
+            <div class="tabela2">
                 <div class="resumo"><b>Resumo do Pedido</b></div>
                 <div class="subtotal">
                     <div class="sub">Subtotal</div>
@@ -84,5 +117,11 @@ $total = 0.00;
                 <div class="adicionarmais"><input type="submit" value="Adicionar mais produtos"></div>
                 <div class="fecharpedido"><input type="submit" value="Fechar Pedido"></div>
             </div>
+            </div>
         </div>
-        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

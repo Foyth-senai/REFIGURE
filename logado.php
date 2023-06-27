@@ -13,7 +13,7 @@ while ($linhas = $comando->fetch() )
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
@@ -41,7 +41,7 @@ while ($linhas = $comando->fetch() )
                     <a class="nav-link" href="login.php"><i class="bi bi-person"></i>Entrar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="carrinhon.php"><i class="bi bi-list-check"></i>Carrinho</a>
+                    <a class="nav-link" href="carrinho.php"><i class="bi bi-list-check"></i>Carrinho</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="categorias.html"><i class="bi bi-collection"></i>Categorias</a>
@@ -79,7 +79,7 @@ while ($linhas = $comando->fetch() )
                             <i class="bi bi-person"></i>
                         </span>
                     </button>
-                    <button class="btn me-3" name="carrinho" onclick="myFunction()">
+                    <button class="btn me-3" name="carrinho" onclick="carrinho()">
                         <p class="paragraph mt-3"> Carrinho </p>
                         <span class="icon-wrapper">
                             <i class="bi bi-cart2"></i>

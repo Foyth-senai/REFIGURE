@@ -18,6 +18,11 @@ function Logo1()
   window.location.replace("logado2.php")
 };
 
+function carrinho()
+{
+  window.location.replace("carrinho.php")
+};
+
 /* Abre e fecha menu lateral em modo mobile */
 
 const menuMobile = document.querySelector(".menu-mobile");
@@ -150,4 +155,34 @@ function p8()
 function p9()
 {
   window.location.replace("CompraRuivo.php")
+};
+
+function p10()
+{
+  window.location.replace("CompraMumia.php")
+};
+
+function p11()
+{
+  window.location.replace("CompraMonstro.php")
+};
+
+function p12()
+{
+  window.location.replace("compraTubarao.php")
+};
+
+function p13()
+{
+  window.location.replace("CompraPinguim.php")
+};
+
+function p14()
+{
+  window.location.replace("CompraGato.php")
+};
+
+function p15()
+{
+  window.location.replace("CompraOgro.php")
 };
