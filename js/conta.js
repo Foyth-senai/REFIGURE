@@ -27,3 +27,18 @@ function ValidarCPF()
         }
         resposta = expressao.test(texto);
     }
+    function ValidarTelefone()
+    {
+        //ACESSE O SITE regex101.com
+        expressao = /[0-9]{2} [0-9]{5}-[0-9]{4}$/g;
+        texto = Telefone.value;
+        if (texto.length==2)
+        {
+            Telefone.value = texto + " "
+        }
+        if (texto.length==8)
+        {
+            Telefone.value = texto + "-"
+        }
+        resposta = expressao.test(texto);
+    }
