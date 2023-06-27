@@ -24,6 +24,21 @@ function carrinho()
   window.location.replace("carrinho.php")
 };
 
+function categoriaanimal()
+{
+  window.location.replace("categoria_animal.html")
+};
+
+function categoriaspeb()
+{
+  window.location.replace("categoria_pb.html")
+};
+
+function categoriascolorido()
+{
+  window.location.replace("categoria_colorido.html")
+};
+
 /* Abre e fecha menu lateral em modo mobile */
 
 const menuMobile = document.querySelector(".menu-mobile");

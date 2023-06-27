@@ -14,90 +14,86 @@
   <i class="bi bi-list menu-mobile"></i>
 
   <aside id="aside"> <!--Menu lateral-->
-      <section class="profile"> <!--Seção da foto de perfil, nome, e social-links-->
-          <img src="./imagem/RE FIGURE.png" alt="Foto refigure"> <!--Foto pessoal-->
-          <h1>Re:Figure</h1>
-      </section>
-
-      <nav id="navbar" class="nav-menu"> <!--navbar lateral-->
-          <ul class="nav flex-column"> <!--Lista em column-->
-              <li class="nav-item">
-                  <a class="nav-link" href="logado2.php"><i class="bi bi-house"></i>Inicio</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="login.php"><i class="bi bi-person"></i>Entrar</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="carrinho.php"><i class="bi bi-list-check"></i>Carrinho</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="categorias.html"><i class="bi bi-collection"></i>Categorias</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="filamento.html"><i class="bi bi-recycle"></i>Filamento</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="termos.html"><i class="bi bi-newspaper"></i>Termos</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="suporte.html"><i class="bi bi-question-circle"></i>Suporte</a>
-              </li>
-          </ul>
-      </nav>
-  </aside>
-  <main id="main">
-
-    <section id="cabecalho" class="cabecalho alinhamento m-0 p-0">
-
-        <div class="cantologo col-md-4 d-flex justify-content-start align-itens-center text-align-center">
-
-            <img class="logo" id="logo" onclick="Logo()" src="imagem/RE FIGURE.png">
-
-        </div>
-        <div class="nome canto col-md-4">
-            <b>Re:Figure <i class="bi bi-tree"></i></b>
-        </div>  
-        <div class="canto col-md-4 justify-content-end align-itens-center text-align-center">
-
-                <button name="botao" type="submit" class="btn me-2" onclick="entrar()">
-                    <p class="paragraph mt-3"> Entrar </p>
-                    <span class="icon-wrapper">
-                        <i class="bi bi-person"></i>
-                    </span>
-                </button>
-                <button class="btn me-3" name="carrinho" type="submit" onclick="myFunction()">
-                    <p class="paragraph mt-3"> Carrinho </p>
-                    <span class="icon-wrapper">
-                        <i class="bi bi-cart2"></i>
-                    </span>
-                </button>
-        </div>
-
+    <section class="profile"> <!--Seção da foto de perfil, nome, e social-links-->
+        <img src="./imagem/RE FIGURE.png" alt="Foto refigure"> <!--Foto pessoal-->
+        <h1>Re:Figure</h1>
     </section>
+
+    <nav id="navbar" class="nav-menu"> <!--navbar lateral-->
+        <ul class="nav flex-column"> <!--Lista em column-->
+            <li class="nav-item">
+                <a class="nav-link" href="logado2.php"><i class="bi bi-house"></i>Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.php"><i class="bi bi-person"></i>Entrar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="carrinho.php"><i class="bi bi-list-check"></i>Carrinho</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="categorias.html"><i class="bi bi-collection"></i>Categorias</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="filamento.html"><i class="bi bi-recycle"></i>Filamento</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="termos.html"><i class="bi bi-newspaper"></i>Termos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="suporte.html"><i class="bi bi-question-circle"></i>Suporte</a>
+            </li>
+        </ul>
+    </nav>
+</aside>
+
+<section id="cabecalho" class="cabecalho alinhamento m-0 p-0">
+
+    <div class="cantologo col-md-4 d-flex justify-content-start align-itens-center text-align-center">
+
+        <img class="logo" id="logo" onclick="Logo1()" src="imagem/RE FIGURE.png">
+
+    </div>
+    <div class="nome canto col-md-4">
+        <b>Re:Figure <i class="bi bi-tree"></i></b>
+    </div>  
+    <div class="canto col-md-4 justify-content-end align-itens-center text-align-center">
+
+            <button name="botao" class="btn me-2" onclick="Conta()">
+                <p class="paragraph mt-3"> Conta </p>
+                <span class="icon-wrapper">
+                    <i class="bi bi-person"></i>
+                </span>
+            </button>
+            <button class="btn me-3" name="carrinho" onclick="carrinho()">
+                <p class="paragraph mt-3"> Carrinho </p>
+                <span class="icon-wrapper">
+                    <i class="bi bi-cart2"></i>
+                </span>
+            </button>
+    </div>
+
+</section>
+
+<section id="opcoes" class="opcoes m-0 p-0">
+
+    <div class="alinhamento col-md-3">
+        <b onclick="lancamentos()" style="cursor: pointer;">Lançamentos</b>
+    </div>
+
+    <div class="alinhamento col-md-3">
+        <b onclick="categorias()" style="cursor: pointer;">Categorias</b>
+    </div>
+
+    <div class="alinhamento col-md-3">
+        <b onclick="filamento()" style="cursor: pointer;">Filamento</b>
+    </div>
+
+    <div class="alinhamento col-md-3">
+        <b onclick="suporte()" style="cursor: pointer;">Suporte</b>
+    </div>
+
+</section>
     
-    <section id="opcoes" class="opcoes m-0 p-0">
-
-        <div class="alinhamento col-md-3">
-            <b onclick="myFunction()" style="cursor: pointer;">Lançamentos</b>
-        </div>
-
-        <div class="alinhamento col-md-2">
-            <b onclick="myFunction()" style="cursor: pointer;">Categorias</b>
-        </div>
-
-        <div class="alinhamento col-md-2">
-            <b onclick="myFunction()" style="cursor: pointer;">Filamento</b>
-        </div>
-
-        <div class="alinhamento col-md-2">
-            <b onclick="myFunction()" style="cursor: pointer;">Termos</b>
-        </div>
-
-        <div class="alinhamento col-md-3">
-            <b onclick="myFunction()" style="cursor: pointer;">Suporte</b>
-        </div>
-
-    </section>
     <div class="corpo">
         <div class="titulo">
             <h1>Termos</h1>
@@ -141,7 +137,7 @@
             <section id="rodape" class="m-0 p-0">
               <div class="alinharrow row">
                 <div class="alinhamentodalogo col-md-3">
-                  <img class="logorodape" id="logo" onclick="Logo()" src="imagem/RE FIGURE.png">
+                  <img class="logorodape" id="logo" onclick="Logo1()" src="imagem/RE FIGURE.png">
                 </div>
                 <div class="alinhamentorodape col-md-3">
                   <p>Copyright &copy; 2023 - All Rights Reserved - Re:Figure</p>
