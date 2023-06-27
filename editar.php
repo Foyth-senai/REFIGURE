@@ -35,13 +35,14 @@ while ($linhas = $comando->fetch() )
     </div>
 
 <div class="informacao">
-    <form class="area" action="senha.php" method="post">
+    <form class="area" action="editar.php" method="post">
         <div class="minhaconta"><h1 ><ion-icon class="icone" name="person-circle-outline"></ion-icon><b>Alterar senha</b></h1></div>
         <div class="informacoes">
         <h2><b>Insira o seu CPF e altere sua senha</b></h2>
         <input maxlength="14" id="cpf" onkeyup="ValidarCPF();" placeholder="Insira seu CPF" name="cpf_alterar" class="input-style" type="text">
-        <input placeholder="Insira sua senha atual" name="senha_antiga" class="input-style" type="text">
-        <input placeholder="Insira sua senha nova" name="senha_nova" class="input-style" type="text">
+        <input placeholder="Insira o novo nome" name="nome_novo" class="input-style" type="text">
+        <input placeholder="Insira o novo email" name="email_novo" class="input-style" type="text">
+        <input placeholder="Insira o novo telefone" name="telefone_novo" class="input-style" type="text">
         </div>
         <br> <br>
         <div class="botoesalterar">
@@ -52,16 +53,35 @@ while ($linhas = $comando->fetch() )
 
     $comando = $pdo->prepare("SELECT * FROM cadastro where logado = 1");
     $resultado = $comando->execute();
+    while ($linhas = $comando->fetch() )
+    {
+        $nome = $linhas["nome_cliente"]; // Nome da coluna XAMPP
+        $cpf = $linhas["cpf_cliente"]; // Nome da coluna XAMPP
+        $email = $linhas["email_cliente"]; // Nome da coluna XAMPP
+        $celular = $linhas["celular_cliente"]; // Nome da coluna XAMPP
+        $rua = $linhas["rua"]; // Nome da coluna XAMPP
+        $numero = $linhas["numero_local"]; // Nome da coluna XAMPP
+        $complementos = $linhas["complementos"]; // Nome da coluna XAMPP
+        $estado = $linhas["estado"]; // Nome da coluna XAMPP
+        $cidade = $linhas["cidade"]; // Nome da coluna XAMPP
+        $pais = $linhas["pais"]; // Nome da coluna XAMPP
+
+    }
 
        if(isset($_POST["editar"]) )
        {
           $cpf_alterar = $_POST["cpf_alterar"];
-          $senha_antiga = $_POST["senha_antiga"];
-          $senha_nova = $_POST["senha_nova"];
-           $comando = $pdo->prepare("UPDATE cadastro SET senha_cliente='$senha_nova' WHERE cpf_cliente='$cpf_alterar'");
+          $nome_novo = $_POST["nome_novo"];
+          $email_novo = $_POST["email_novo"];
+          if($nome_novo == ""){
+            $nome_novo = $nome;
+          }
+          if($email_novo == ""){
+            $email_novo = $email;
+          }
+           $comando = $pdo->prepare("UPDATE cadastro SET nome_cliente='$nome_novo', email_cliente='$email_novo' WHERE cpf_cliente='$cpf_alterar'");
            $resultado = $comando->execute();
            header("Location:conta.php");
-
        }
     ?>   
 
