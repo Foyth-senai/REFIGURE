@@ -74,7 +74,18 @@ CREATE TABLE `produtos` (
 
 INSERT INTO `produtos` (`id_produto`, `nome_produto`, `preco_produto`, `qtd_produto`, `carrinho`, `preco_final`) VALUES
 (1, 'Urubu Preto e Branco', 70.00, 1, 0, 70.00),
-(2, 'Burguês Preto e Branco', 60.00, 1, 0, 60.00);
+(2, 'Burguês Preto e Branco', 60.00, 1, 0, 60.00),
+(3, 'Capitão Picanha', 130.00, 1, 0, 130.00),
+(4, 'Mago Cósmico', 150.00, 1, 0, 150.00),
+(5, 'Pirata Narigudo', 140.00, 1, 0, 140.00),
+(6, 'Robo Calcinha', 69.69, 1, 0, 69.69),
+(7, 'Dino Spino', 170.00, 1, 0, 170.00),
+(8, 'Mamute Manny', 140.00, 1, 0, 140.00),
+(9, 'Paulo Ruivo', 200.00, 1, 0, 200.00),
+(10, 'Mumia Mommy', 97.00, 1, 0, 97.00),
+(11, 'Tutubarão', 170.00, 1, 0, 170.00),
+(12, 'Pinguim Gordo', 120.00, 1, 0, 120.00),
+(13, 'Gato Chato', 120.00, 1, 0, 120.00);
 
 --
 -- Índices para tabelas despejadas
