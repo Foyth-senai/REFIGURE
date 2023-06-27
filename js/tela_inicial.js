@@ -1,6 +1,16 @@
+function Conta()
+{
+  window.location.replace("conta.php")
+};
+
 function Logo()
 {
   window.location.replace("index.html")
+};
+
+function entrar()
+{
+  window.location.replace("login.php")
 };
 
 function Logo1()

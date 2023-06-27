@@ -16,8 +16,8 @@ include("conecta.php");
 </head>
 <body>
     <div class="cabecalho">
-        <a href="logado.php"><h3><ion-icon class="back" name="arrow-back-circle-outline"></ion-icon></h3></a>
-        <a href="logado.php">
+        <a href="index.html"><h3><ion-icon class="back" name="arrow-back-circle-outline"></ion-icon></h3></a>
+        <a href="index.html">
         <img class="logo" src="imagem/RE FIGURE.png"></a>
         <h1 class="refi">RE:Figure</h1>
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
@@ -35,7 +35,7 @@ include("conecta.php");
                     <span><ion-icon class="imgs" name="lock-closed-outline"></ion-icon><b>Senha</b></span>
                     <input type="password" name="confirmar_senha" class="formatar" placeholder="Coloque sua senha">
                 </div>
-                <a class="esqueceu" href="#"><b>Esqueceu sua senha?</b></a>
+                <a class="esqueceu" href="senha.php"><b>Esqueceu sua senha?</b></a>
                 <a class="conta" href="Cadastro.html"><b>Não tem conta?</b></a>
                 <button name="entrar" type="submit" class="entrarbotao" onclick="exibeAlert()">Entrar</button>
             </div>

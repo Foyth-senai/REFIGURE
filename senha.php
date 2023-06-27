@@ -28,45 +28,42 @@ while ($linhas = $comando->fetch() )
 <body>
     
     <div class="cabecalho">
-        <div class="divvoltar"><a href="logado.php"><img src="imagem/botaovoltar.png" class="botaovoltar"></div></a>
-        <a href="logado.php">
+        <div class="divvoltar"><a href="javascript:history.back()"><img src="imagem/botaovoltar.png" class="botaovoltar"></div></a>
+        <a href="javascript:history.back()">
         <img class="logo" src="imagem/RE FIGURE.png"></a>
         <div class="invisivel"></div>
     </div>
-
-    <?php
-    $comando = $pdo->prepare("SELECT * FROM cadastro where logado = 1");
-    $resultado = $comando->execute();
-        while ($linhas = $comando->fetch() )
-             {
-                 $nome = $linhas["nome_cliente"]; // Nome da coluna XAMPP
-                 $cpf = $linhas["cpf_cliente"]; // Nome da coluna XAMPP
-                 $email = $linhas["email_cliente"]; // Nome da coluna XAMPP
-                 $celular = $linhas["celular_cliente"]; // Nome da coluna XAMPP
-                 $rua = $linhas["rua"]; // Nome da coluna XAMPP
-                 $numero = $linhas["numero_local"]; // Nome da coluna XAMPP
-                 $complementos = $linhas["complementos"]; // Nome da coluna XAMPP
-                 $estado = $linhas["estado"]; // Nome da coluna XAMPP
-                 $cidade = $linhas["cidade"]; // Nome da coluna XAMPP
-                 $pais = $linhas["pais"]; // Nome da coluna XAMPP
-
-             }?>
 
 <div class="informacao">
     <form class="area" action="senha.php" method="post">
         <div class="minhaconta"><h1 ><ion-icon class="icone" name="person-circle-outline"></ion-icon><b>Alterar senha</b></h1></div>
         <div class="informacoes">
         <h2><b>Insira o seu CPF e altere sua senha</b></h2>
-        <input placeholder="Insira seu CPF" class="input-style" type="text">
-        <input placeholder="Insira sua senha atual" class="input-style" type="text">
-        <input placeholder="Insira sua senha nova" class="input-style" type="text">
-        <input placeholder="Confirme sua senha" class="input-style" type="text">   
+        <input placeholder="Insira seu CPF" name="cpf_alterar" class="input-style" type="text">
+        <input placeholder="Insira sua senha atual" name="senha_antiga" class="input-style" type="text">
+        <input placeholder="Insira sua senha nova" name="senha_nova" class="input-style" type="text">
         </div>
         <br> <br>
         <div class="botoesalterar">
-        <button class="btn1"><b>Editar</b></button>
+        <button class="btn1" type="submit" name="editar"><b>Editar</b></button>
         </div>
-    </form>   
+    </form>
+    <?php
+
+    $comando = $pdo->prepare("SELECT * FROM cadastro where logado = 1");
+    $resultado = $comando->execute();
+
+       if(isset($_POST["editar"]) )
+       {
+          $cpf_alterar = $_POST["cpf_alterar"];
+          $senha_antiga = $_POST["senha_antiga"];
+          $senha_nova = $_POST["senha_nova"];
+           $comando = $pdo->prepare("UPDATE cadastro SET senha_cliente='$senha_nova' WHERE cpf_cliente='$cpf_alterar'");
+           $resultado = $comando->execute();
+           header("Location:conta.php");
+
+       }
+    ?>   
 
 </div>
 

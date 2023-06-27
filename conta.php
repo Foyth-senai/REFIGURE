@@ -53,7 +53,7 @@ while ($linhas = $comando->fetch() )
              }?>
 
 <div class="informacao">
-    <form class="area">
+    <form class="area" method="post">
         <div class="minhaconta"><h1 ><ion-icon class="icone" name="person-circle-outline"></ion-icon><b>Minha Conta</b></h1></div>
         <div class="informacoes">
         <h2><b>Informações de Acesso</b></h2>
@@ -61,10 +61,20 @@ while ($linhas = $comando->fetch() )
         <h4><?php echo($email); ?></h4>
         </div>
         <div class="botoesalterar">
-        <button class="btn1"><b>Editar</b></button>
+        <button class="btn1" name="editar"><b>Editar</b></button>
         <br>
-        <button class="btn1"><b>Mudar Senha</b></button>
+        <button class="btn1" name="senha"><b>Mudar Senha</b></button>
         </div>
+        <?php 
+          if(isset($_POST["editar"]) )
+          {
+            header("Location:editar.php");
+          }
+          if(isset($_POST["senha"]) )
+          {
+            header("Location:senha.php");
+          }
+        ?>
         <br> <br> <br>
         <div class="enderecotitulo"><ion-icon class="icone" name="location-outline"></ion-icon><b>Endereços Cadastrados</b><button class="btn2"><b>Gerenciar Endereços</b></button></div>
         <br>
@@ -144,6 +154,6 @@ while ($linhas = $comando->fetch() )
 </section>
 </main>
 <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="js/conta.js"></script>
+<script src="./js/conta.js"></script>
 </body>
 </html>

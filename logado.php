@@ -13,250 +13,302 @@ while ($linhas = $comando->fetch() )
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <title>Re:Figure</title>
     <link rel="icon" href="imagem/RE FIGURE.png">
-    <link rel="stylesheet" type="text/css" href="./css/tela_inicial.css">
+    <link rel="stylesheet" type="text/css" href="./css/tela_inicial2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
-    <div class="cabecalho">
-        <a href="logado.php">
-        <img class="logo" src="imagem/RE FIGURE.png"></a>
-        <div class="container-input">
-            <input type="text" placeholder="Pesquisar" name="text" class="input">
-            <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-              <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
-          </svg>
-          </div>
-          
-        <div class="canto">
-          <form action="logado.php" method="post">
-            <button name="botao" type="submit" class="btn">
-              <?php 
-                if($logado==1){
-                  $conta = "Conta";
-                  if(isset($_POST["botao"]) )
-                  {
-                    ?><script>window.location.replace("conta.php");</script><?php
-                  }
-                } else{
-                  $conta = "Entrar";
-                  if(isset($_POST["botao"]) )
-                  {
-                    ?><script>window.location.replace("login.php");</script><?php
-                  }
-                }
-              ?>
-                <p class="paragraph"> <?php echo($conta); ?> </p>
-                <span class="icon-wrapper">
-                    <ion-icon name="person-circle-outline"></ion-icon>
-                </span>
-              </button></form>
-              <?php 
-              ?>
-              <form action="logado.php" method="post">
-                <button class="btn" name="carrinho" type="submit">
-                <?php 
-                if($logado==1){
-                  if(isset($_POST["carrinho"]) )
-                  {
-                    ?><script>window.location.replace("carrinho.php");</script><?php
-                  }
-                } else{
-                  if(isset($_POST["carrinho"]) )
-                  {
-                    ?><script>window.location.replace("autenticacao.html");</script><?php
-                  }
-                } ?>
-                  <p class="paragraph"> Carrinho </p>
-                  <span class="icon-wrapper">
-                      <ion-icon name="cart-outline"></ion-icon>
-                  </span>
-                </button></form>
-        </div>
-    </div>
-    <div class="opcoes">
-        <nav class="opcoes_texto">
-                <ul>
-                  <li><a href="lancamentos.html"> <b> Lançamentos</a> </b></li>
-                  <li><a href="categorias.html"> <b> Categorias </a></b>
-                    <ul>
-                      <li><a href="categoria_animal.html"> <b> Animais</a></b></li>
-                      <li><a href="categoria_pb.html"> <b> P&B</a></b></li>
-                      <li><a href="categoria_colorido.html"> <b> Coloridos</a></b></li>
-                    </ul>
-                  </li>
-                  <li><a href="filamento.html"> <b> Filamento</a></b></li>
-                  <li><a href="termos.html"> <b> Termos</a></b></li>
-                  <li><a href="suporte.html"> <b> Suporte</a></b></li>
-                </ul>
+
+    <i class="bi bi-list menu-mobile"></i>
+
+    <aside id="aside"> <!--Menu lateral-->
+        <section class="profile"> <!--Seção da foto de perfil, nome, e social-links-->
+            <img src="./imagem/RE FIGURE.png" alt="Foto refigure"> <!--Foto pessoal-->
+            <h1>Re:Figure</h1>
+        </section>
+
+        <nav id="navbar" class="nav-menu"> <!--navbar lateral-->
+            <ul class="nav flex-column"> <!--Lista em column-->
+                <li class="nav-item">
+                    <a class="nav-link" href="logado2.php"><i class="bi bi-house"></i>Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php"><i class="bi bi-person"></i>Entrar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="carrinhon.php"><i class="bi bi-list-check"></i>Carrinho</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="categorias.html"><i class="bi bi-collection"></i>Categorias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="filamento.html"><i class="bi bi-recycle"></i>Filamento</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="termos.html"><i class="bi bi-newspaper"></i>Termos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="suporte.html"><i class="bi bi-question-circle"></i>Suporte</a>
+                </li>
+            </ul>
         </nav>
-    </div>
-    <div class="slideshow-container">
+    </aside>
 
-      <div class="mySlides fade">
-        <a href="filamento.html">
-        <img src="imagem/fundo_fila.png" style="width:100%">
-      </div></a>
-      <a href="#">
-      <div class="mySlides fade">
-        <img src="imagem/promocoes.png" style="width:100%">
-      </div></a>
-      <a href="lancamentos.html">
-      <div class="mySlides fade">
-        <img src="imagem/lacamentos.png" style="width:100%">
-      </div></a>
+    <main id="main">
+
+        <section id="cabecalho" class="cabecalho alinhamento m-0 p-0">
+
+            <div class="cantologo col-md-4 d-flex justify-content-start align-itens-center text-align-center">
+
+                <img class="logo" id="logo" onclick="Logo()" src="imagem/RE FIGURE.png">
+
+            </div>
+            <div class="nome canto col-md-4">
+                <b>Re:Figure <i class="bi bi-tree"></i></b>
+            </div>  
+            <div class="canto col-md-4 justify-content-end align-itens-center text-align-center">
+
+                    <button name="botao" class="btn me-2" onclick="Conta()">
+                        <p class="paragraph mt-3"> Conta </p>
+                        <span class="icon-wrapper">
+                            <i class="bi bi-person"></i>
+                        </span>
+                    </button>
+                    <button class="btn me-3" name="carrinho" onclick="myFunction()">
+                        <p class="paragraph mt-3"> Carrinho </p>
+                        <span class="icon-wrapper">
+                            <i class="bi bi-cart2"></i>
+                        </span>
+                    </button>
+            </div>
+
+        </section>
+        
+        <section id="opcoes" class="opcoes m-0 p-0">
+
+            <div class="alinhamento col-md-3">
+                <b onclick="lancamentos()" style="cursor: pointer;">Lançamentos</b>
+            </div>
+
+            <div class="alinhamento col-md-2">
+                <b onclick="categorias()" style="cursor: pointer;">Categorias</b>
+            </div>
+
+            <div class="alinhamento col-md-2">
+                <b onclick="filamento()" style="cursor: pointer;">Filamento</b>
+            </div>
+
+            <div class="alinhamento col-md-2">
+                <b onclick="termos()" style="cursor: pointer;">Termos</b>
+            </div>
+
+            <div class="alinhamento col-md-3">
+                <b onclick="suporte()" style="cursor: pointer;">Suporte</b>
+            </div>
+
+        </section>
+
+        <section id="carrosel" class="m-0 p-0">
+
+            <div class="col-md-12">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <img class="fundo_fila" src="imagem/fundo_fila.png" style="width:100%">
+                      <img class="fundo_fila_1024" src="imagem/fundo_fila_1024.png " style="width:100%">
+                      <img class="fundo_fila_680" src="imagem/fundo_fila_680.png" style="width:100%">
+                    </div>
+                    <a href="lancamentos.html">
+                    <div class="mySlides fade">
+                      <img class="fundo_fila" src="imagem/promocoes.png" style="width:100%">
+                      <img class="fundo_fila_1024" src="imagem/promocoes_1024.png" style="width: 100%">
+                      <img class="fundo_fila_680" src="imagem/promocoes_680.png" style="width:100%">
+                    </div></a>
+                    <a href="CompraOgro.php">
+                    <div class="mySlides fade">
+                      <img class="fundo_fila" src="imagem/lacamentos.png" style="width:100%">
+                      <img class="fundo_fila_1024" src="imagem/lancamentos_1024.png" style="width: 100%">
+                      <img class="fundo_fila_680" src="imagem/lancamentos_680.png" style="width:100%">
+                    </div></a>
+                  
+              
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>
+              
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>
+            </div>
+
+        </section>
+
+        <section id="produtos" class="m-0 p-0">
+            <div class="titulo"><h1>PRODUTOS</h1></div>
+            <div class="container-fluid alinhamento">
+                <div class=" row">
+                    <div class="alinhamento col-md-4">
+                        <div class="card">
+                            <div class="imgBox">
+                              <img src="imagem/personagem1.png" class="figure">
+                            </div>
+                            <div class="contentBox">
+                              <h3>Urubu preto e branco</h3>
+                              <h2 class="preco">R$<small>70.00</small></h2>
+                              <a onclick="p1()" style="cursor: pointer;" class="comprar">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alinhamento col-md-4">
+                        <div class="card">
+                            <div class="imgBox">
+                              <img src="imagem/personagem2.png" class="figure">
+                            </div>
+                            <div class="contentBox">
+                              <h3>Burguês preto e branco</h3>
+                              <h2 class="preco">R$<small>60.00</small></h2>
+                              <a onclick="p2()" style="cursor: pointer;" class="comprar">Comprar</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="alinhamento col-md-4">
+                        <div class="card">
+                            <div class="imgBox">
+                              <img src="imagem/personagem3.png" class="figure">
+                            </div>
+                            <div class="contentBox">
+                              <h3>Heroí Picanha</h3>
+                              <h2 class="preco">R$<small>130.00</small></h2>
+                              <a onclick="p3()" style="cursor: pointer;" class="comprar">Comprar</a>
+                            </div>
+                          </div>
+                  
+                    </div>
+                    <div class="alinhamento col-md-4">
+                        <div class="card">
+                            <div class="imgBox">
+                              <img src="imagem/personagem4.png" class="figure">
+                            </div>
+                            <div class="contentBox">
+                              <h3>Mago cósmico</h3>
+                              <h2 class="preco">R$<small>150.00</small></h2>
+                              <a onclick="p4()" style="cursor: pointer;" class="comprar">Comprar</a>
+                            </div>
+                          </div>
+                  
+                    </div>
+                    <div class="alinhamento col-md-4">
+                        <div class="card">
+                            <div class="imgBox">
+                              <img src="imagem/personagem5.png" class="figure">
+                            </div>
+                            <div class="contentBox">
+                              <h3>Pirata narigudo</h3>
+                              <h2 class="preco">R$<small>140.00</small></h2>
+                              <a onclick="p5()" style="cursor: pointer;" class="comprar">Comprar</a>
+                            </div>
+                          </div>
+                  
+                    </div>
+                    <div class="alinhamento col-md-4">
+                        <div class="card">
+                            <div class="imgBox">
+                              <img src="imagem/personagem6.png" class="figure">
+                            </div>
+                            <div class="contentBox">
+                              <h3>Robo calcinha</h3>
+                              <h2 class="preco">R$<small>69.69</small></h2>
+                              <a onclick="p6()" style="cursor: pointer;" class="comprar">Comprar</a>
+                            </div>
+                          </div>
+                  
+                    </div>
+                    <div class="alinhamento col-md-4">
+                        <div class="card">
+                            <div class="imgBox">
+                              <img src="imagem/personagem7.png" class="figure">
+                            </div>
+                            <div class="contentBox">
+                              <h3>Dino Spino</h3>
+                              <h2 class="preco">R$<small>170.00</small></h2>
+                              <a onclick="p7()" style="cursor: pointer;" class="comprar">Comprar</a>
+                            </div>
+                          </div>
+                  
+                    </div>
+                    <div class="alinhamento col-md-4">
+                        <div class="card">
+                            <div class="imgBox">
+                              <img src="imagem/personagem8.png" class="figure">
+                            </div>
+                            <div class="contentBox">
+                              <h3>Mamute Manny</h3>
+                              <h2 class="preco">R$<small>140.00</small></h2>
+                              <a onclick="p8()" style="cursor: pointer;" class="comprar">Comprar</a>
+                            </div>
+                          </div>
+                  
+                    </div>
+                    <div class="alinhamento col-md-4">
+                        <div class="card">
+                            <div class="imgBox">
+                              <img src="imagem/personagem9.png" class="figure">
+                            </div>
+                            <div class="contentBox">
+                              <h3>Paulo Ruivo</h3>
+                              <h2 class="preco">R$<small>200.00</small></h2>
+                              <a onclick="p9()" style="cursor: pointer;" class="comprar">Comprar</a>
+                            </div>
+                          </div>
+                  
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="rodape" class="m-0 p-0">
+          <div class="alinharrow row">
+            <div class="alinhamentodalogo col-md-3">
+              <img class="logorodape" id="logo" onclick="Logo1()" src="imagem/RE FIGURE.png">
+            </div>
+            <div class="alinhamentorodape col-md-3">
+              <p>Copyright &copy; 2023 - All Rights Reserved - Re:Figure</p>
+            </div>
+            <div class="delete col-md-3">
+              <ul>
+                <li>Desenvolvedores:</li>
+                <li>Cauê Marchi Foyth</li>
+                <li>Jônatas Rocha dos Santos</li>
+                <li>Lucas Giovani Fruck</li>
+              </ul>
+            </div>
+            <div class="alinhamentorodape col-md-3">
+              <div class="divpai">
+                <ul class="insta">
+                  <a href="https://instagram.com/caue_foyth" target="_blank"><li><i class="bi bi-instagram"></i>Cauê</li></a>
+                  <a href="https://instagram.com/arcaro_jonatas" target="_blank"><li><i class="bi bi-instagram"></i>Jônatas</li></a>
+                  <a href="https://instagram.com/lucasgiovanifruck" target="_blank"><li><i class="bi bi-instagram"></i>Lucas</li></a>     
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+
+    </main>
     
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-    <div class="titulo">
-    <h1>PRODUTOS</h1>
-    </div>
-    <div class="corpo">
-      <div class="catalogo">
-        <div class="card">
-          <div class="imgBox">
-            <img src="imagem/personagem1.png" class="figure">
-          </div>
-          <div class="contentBox">
-            <h3>Urubu preto e branco</h3>
-            <h2 class="preco">R$<small>70.00</small></h2>
-            <a href="compraUrubu.php" class="comprar">Comprar</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="imgBox">
-            <img src="imagem/personagem2.png" class="figure">
-          </div>
-          <div class="contentBox">
-            <h3>Burguês preto e branco</h3>
-            <h2 class="preco">R$<small>60.00</small></h2>
-            <a href="CompraBurgues.php" class="comprar">Comprar</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="imgBox">
-            <img src="imagem/personagem3.png" class="figure">
-          </div>
-          <div class="contentBox">
-            <h3>Heroí Picanha</h3>
-            <h2 class="preco">R$<small>130.00</small></h2>
-            <a href="CompraCapitao.php" class="comprar">Comprar</a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="catalogo">
-        <div class="card">
-          <div class="imgBox">
-            <img src="imagem/personagem4.png" class="figure">
-          </div>
-          <div class="contentBox">
-            <h3>Mago cósmico</h3>
-            <h2 class="preco">R$<small>150.00</small></h2>
-            <a href="CompraMago.php" class="comprar">Comprar</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="imgBox">
-            <img src="imagem/personagem5.png" class="figure">
-          </div>
-          <div class="contentBox">
-            <h3>Pirata narigudo</h3>
-            <h2 class="preco">R$<small>140.00</small></h2>
-            <a href="CompraPirata.php" class="comprar">Comprar</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="imgBox">
-            <img src="imagem/personagem6.png" class="figure">
-          </div>
-          <div class="contentBox">
-            <h3>Robo calcinha</h3>
-            <h2 class="preco">R$<small>69.69</small></h2>
-            <a href="CompraRobo.php" class="comprar">Comprar</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="catalogo">
-        <div class="card">
-          <div class="imgBox">
-            <img src="imagem/personagem7.png" class="figure">
-          </div>
-          <div class="contentBox">
-            <h3>Dino Spino</h3>
-            <h2 class="preco">R$<small>170.00</small></h2>
-            <a href="CompraDino.php" class="comprar">Comprar</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="imgBox">
-            <img src="imagem/personagem8.png" class="figure">
-          </div>
-          <div class="contentBox">
-            <h3>Mamute Manny</h3>
-            <h2 class="preco">R$<small>140.00</small></h2>
-            <a href="CompraMamute.php" class="comprar">Comprar</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="imgBox">
-            <img src="imagem/personagem9.png" class="figure">
-          </div>
-          <div class="contentBox">
-            <h3>Paulo Ruivo</h3>
-            <h2 class="preco">R$<small>200.00</small></h2>
-            <a href="CompraRuivo.php" class="comprar">Comprar</a>
-          </div>
-        </div>
-
-      </div>
-      <div class="rodape">
-      <img class="logo_rodape" src="imagem/RE FIGURE.png">
-      <ul>
-        <a href="filamento.html"><li>Filamento</li></a>
-        <a href="lancamentos.html"><li>Lançamentos</li></a>
-        <a href="termos.html"><li>Termos</li></a>
-      </ul>
-      <ul>
-      <li>Desenvolvedores:</li>
-          <li>Cauê Marchi Foyth</li>
-          <li>Jônatas Rocha dos Santos</li>
-          <li>Lucas Giovani Fruck</li>
-        </ul>
-        <div class="contatos">
-          <ul>
-            <a href="https://instagram.com/caue_foyth" target="_blank"><li><ion-icon name="logo-instagram"></ion-icon>Cauê</li></a>
-            <a href="https://instagram.com/arcaro_jonatas" target="_blank"><li><ion-icon name="logo-instagram"></ion-icon>Jônatas</li></a>
-            <a href="https://instagram.com/lucasgiovanifruck" target="_blank"><li><ion-icon name="logo-instagram"></ion-icon>Lucas</li></a>
-          
-        </ul>
-      </div>
-      </div>  
-      
-    </div>
-  </div>
-    
-<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-<script src="js/tela_inicial.js" class="fundo"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/tela_inicial.js"></script>
 </body>
 </html>
