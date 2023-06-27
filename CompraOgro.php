@@ -129,7 +129,7 @@ while ($linhas = $comando->fetch() )
             // Se clicou no botão comprar:
             if(isset($_POST["comprar"]) )
             {
-                $comando = $pdo->prepare("UPDATE produtos SET carrinho=1 WHERE id_produto = 12;");
+                $comando = $pdo->prepare("UPDATE produtos SET carrinho=1 WHERE id_produto = 15;");
                 $resultado = $comando->execute();
                 ?><script>window.location.replace("carrinho.php");</script><?php
             }

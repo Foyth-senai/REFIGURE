@@ -1,5 +1,6 @@
 <?php
 include("conecta.php");
+$total = 0;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
