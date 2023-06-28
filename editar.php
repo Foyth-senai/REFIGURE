@@ -26,19 +26,34 @@ while ($linhas = $comando->fetch() )
     <link rel="icon" href="imagem/RE FIGURE.png">
 </head>
 <body>
-    
-    <div class="cabecalho">
-        <div class="divvoltar"><a href="javascript:history.back()"><img src="imagem/botaovoltar.png" class="botaovoltar"></div></a>
-        <a href="javascript:history.back()">
-        <img class="logo" src="imagem/RE FIGURE.png"></a>
-        <div class="invisivel"></div>
-    </div>
 
-<div class="informacao">
+<section id="cabecalho" class="cabecalho alinhamento m-0 p-0">
+
+  <div class="cantologo col-md-4 d-flex justify-content-start align-itens-center text-align-center">
+
+      <img class="logo" id="logo" onclick="Logo1()" src="imagem/RE FIGURE.png">
+
+  </div>
+  <div class="nome canto col-md-4">
+      <b>Re:Figure <i class="bi bi-tree"></i></b>
+  </div>  
+  <div class="canto col-md-4 justify-content-end align-itens-center text-align-center">
+  </div>
+</section>
+
+<section id="opcoes" class="opcoes m-0 p-0">
+
+  <div class="alinhamento col-md-3">
+      <b onclick="suporte()" style="cursor: pointer;">Suporte</b>
+  </div>
+
+</section>
+
+<div class="informacao mt-5">
     <form class="area" action="editar.php" method="post">
         <div class="minhaconta"><h1 ><ion-icon class="icone" name="person-circle-outline"></ion-icon><b>Editar Informações</b></h1></div>
+        <h2 class="fs-4 mt-4 d-flex justify-content-center"><b>Insira o seu CPF e altere sua senha</b></h2>
         <div class="informacoes">
-        <h2><b>Insira o seu CPF e altere sua senha</b></h2>
         <input maxlength="14" id="cpf" onkeyup="ValidarCPF();" placeholder="Insira seu CPF" name="cpf_alterar" class="input-style" type="text">
         <input placeholder="Insira o novo nome" name="nome_novo" class="input-style" type="text">
         <input placeholder="Insira o novo email" name="email_novo" class="input-style" type="text">

@@ -6,21 +6,91 @@ body
     overflow-x: hidden;
 }
 
-.cabecalho
+#aside /*Menu lateral*/
 {
-    width: 100%;
-    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    bottom: 0;
+    background-color: #063f1c;
+    overflow-y: auto;
+    width: 300px;
+    transition: all ease-in-out 0.5s;
+    padding: 0 15px;
+    z-index: 9997;
+}
+
+#aside .profile img /*foto pessoal*/
+{
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+}
+
+#aside .profile h1 /*Nome abaixo da foto pessoal*/
+{
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+
+.nav-menu /*Para o nav-menu ficar alinhado*/
+{
+    padding: 1.5rem;
+}
+
+.nav-menu a,
+.nav-menu a:focus /*Para deixar os textoscom suas respectivas cores e tamanhos*/
+{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    margin-bottom: 50px;
-    background-color:rgb(95, 228, 115);
-    border-bottom: 2px;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-style: solid;
+    color: #fff;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i /*Para deixar os icones com suas respectivas cores e tamanhos*/
+{
+    font-size: 24px;
+    padding-right: 0.8rem;
+    color: #fff;
+}
+
+.nav-menu a:hover
+{
+    color: #fff;
+}
+
+i.menu-mobile
+{
+    position: fixed;
+    color: #fff;
+    background-color: #063f1c;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-nav-active
+{
+    overflow: hidden;
+}
+
+.menu-nav-active #aside
+{
+    left: 0;
 }
 
 /* botão usado para voltar para a página principal do nosso site */
@@ -29,10 +99,7 @@ body
     scale: 30%;
 }
 /* logo do nosso site */
-.logo
-{
-    scale: 120%;
-}
+
 
 /* serve para alinhar a responsividade */
 .invisivel
@@ -70,6 +137,27 @@ body
 }
 
 /* Div onde esta localizado a logo do site */
+.logo
+{
+    scale: 100%;
+    transition: all 0.3s ease-out;
+}
+.logo:hover
+{
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+}
+
+.nome
+{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  height: 100%;
+}
+
 .divlogo
 {
     width: 33.3%;
@@ -79,11 +167,12 @@ body
     align-items: center;
 }
 
-.cabecalho a 
+section#cabecalho
 {
-    width: 100px;
-    height: 80px;
-    display: flex;
+    width: 100%;
+    height: 10vh;
+    border-bottom: 2px solid;
+    background-color:rgb(95, 228, 115);
 }
 
 .area
@@ -172,14 +261,22 @@ body
     box-shadow: 0 0 0 0.2rem rgb(95, 228, 115);
   }
   
+  .opcoes
+  {
+    height: 5vh;
+    background-color:rgb(175, 247, 185);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid;
+  }
 
 .botoesalterar
 {
-    margin-left: 50%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: 98%;
     align-items: start;
     margin: 5px;
 }
@@ -209,6 +306,79 @@ body
   .btn1:active {
     transform: scale(0.95);
   }
+
+  .btn 
+{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 5px .2px #00000035;
+    box-shadow: 1px 1px 5px .2px #00000035;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    transition-delay: .2s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-between;
+  }
+  
+  .btn:hover 
+  {
+    width: 150px;
+    transition-delay: .2s;
+    background-color: #fff;
+  }
+
+  .paragraph 
+  {
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 15px;
+    margin-right: 20px;
+    padding-left: 20px;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .btn:hover .paragraph 
+  {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s;
+  }
+
+  .icon-wrapper 
+  {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn:hover  .icon-wrapper .icon 
+  {
+    transform: scale(1.1);
+  }
+
+  
 
 
 .minhaconta
@@ -263,6 +433,25 @@ footer{
   justify-content: center;
   align-items: center;
   height: 18vh;
+}
+
+.cantologo
+{
+    width: 33%;
+    height: 100%;
+}
+
+.canto
+{
+    display: flex;
+}
+
+.alinhamento
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
 }
 
 @media (max-width: 768px)
@@ -378,10 +567,6 @@ section#rodape
 
 @media screen and (max-width: 1000px)
 {
-    .botoesalterar
-    {
-        margin-left: 100px;
-    }
     .botoesalterar .btn1
     {
         height: 50px;

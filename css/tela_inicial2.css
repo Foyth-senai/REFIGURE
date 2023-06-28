@@ -520,12 +520,53 @@ section#cabecalho
   color: black;
 }
 
+#supe .container
+{
+  width: 90%;
+  margin-left: 9%;
+}
+
 .m123
 {
-  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
   height: auto;
   background-color: hsl(0, 0%, 50%, 30%);
-  border: solid 1px;
+  border-top: solid 1px;
+  border-left: solid 1px;
+  border-right: solid 1px;
+}
+
+.m765
+{
+  display: flex;
+  width: 100%;
+  height: 280px;
+}
+
+.m543
+{
+  width: 100%;
+  height: auto;
+  background-color: hsl(0, 0%, 50%, 30%);
+  border-left: solid 1px;
+  border-right: solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.m654
+{
+  width: 100%;
+  height: auto;
+  background-color: hsl(0, 0%, 50%, 30%);
+  border-bottom: solid 1px;
+  border-left: solid 1px;
+  border-right: solid 1px;
   display: flex;
   justify-content: center;
   align-items: center;

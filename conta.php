@@ -27,12 +27,29 @@ while ($linhas = $comando->fetch() )
 </head>
 <body>
     
-    <div class="cabecalho">
-        <div class="divvoltar"><a href="logado.php"><img src="imagem/botaovoltar.png" class="botaovoltar"></div></a>
-        <a href="logado.php">
-        <img class="logo" src="imagem/RE FIGURE.png"></a>
-        <div class="invisivel"></div>
+<section id="cabecalho" class="cabecalho alinhamento m-0 p-0">
+
+  <div class="cantologo col-md-4 d-flex justify-content-start align-itens-center text-align-center">
+
+      <img class="logo" id="logo" onclick="Logo1()" src="imagem/RE FIGURE.png">
+
+  </div>
+  <div class="nome canto col-md-4">
+      <b>Re:Figure <i class="bi bi-tree"></i></b>
+  </div>  
+  <div class="canto col-md-4 justify-content-end align-itens-center text-align-center">
+
+  </div>
+
+</section>
+
+  <section id="opcoes" class="opcoes m-0 p-0">
+
+    <div class="alinhamento col-md-12">
+      <b onclick="suporte()" style="cursor: pointer;">Suporte</b>
     </div>
+
+</section>
 
     <?php
     $comando = $pdo->prepare("SELECT * FROM cadastro where logado = 1");

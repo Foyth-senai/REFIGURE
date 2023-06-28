@@ -3,10 +3,21 @@ function Logo()
   window.location.replace("index.html")
 };
 
+function Logo1()
+{
+  window.location.replace("logado.php")
+};
+
 function senha()
 {
   window.location.replace("senha.php")
 };
+
+function carrinho()
+{
+  window.location.replace("carrinho.php")
+};
+
 
 function ValidarCPF()
     {

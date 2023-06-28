@@ -6,22 +6,6 @@ body
     overflow-x: hidden;
 }
 
-.cabecalho
-{
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    margin-bottom: 50px;
-    background-color:rgb(95, 228, 115);
-    border-bottom: 2px;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-style: solid;
-}
 
 /* botão usado para voltar para a página principal do nosso site */
 .botaovoltar
@@ -31,7 +15,18 @@ body
 /* logo do nosso site */
 .logo
 {
-    scale: 120%;
+    scale: 100%;
+    transition: all 0.3s ease-out;
+}
+
+.nome
+{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  height: 100%;
 }
 
 /* serve para alinhar a responsividade */
@@ -79,11 +74,23 @@ body
     align-items: center;
 }
 
-.cabecalho a 
+.cantologo
 {
-    width: 100px;
-    height: 80px;
+    width: 33%;
+    height: 100%;
+}
+
+.canto
+{
     display: flex;
+}
+
+section#cabecalho
+{
+    width: 100%;
+    height: 10vh;
+    border-bottom: 2px solid;
+    background-color:rgb(95, 228, 115);
 }
 
 .area
@@ -327,6 +334,14 @@ body
   height: 18vh;
 }
 
+.alinhamento
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
 @media (max-width: 768px)
 {
   .fundo_fila_680
@@ -350,6 +365,7 @@ body
     flex-direction: row;
     background-color:rgb(95, 228, 115);
   }
+
   .alinhamentodalogo
   {
     height: 100%;
@@ -386,6 +402,16 @@ section#rodape
   background-color:rgb(95, 228, 115);
   height: 200px;
 }
+
+.opcoes
+{
+  height: 5vh;
+  background-color:rgb(175, 247, 185);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid;
+}
 .rodape
 {
   width: 100%;
@@ -411,6 +437,61 @@ section#rodape
   height: 18vh;
 }
 
+.btn 
+{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 5px .2px #00000035;
+    box-shadow: 1px 1px 5px .2px #00000035;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    transition-delay: .2s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-between;
+  }
+  
+  .btn:hover 
+  {
+    width: 150px;
+    transition-delay: .2s;
+    background-color: #fff;
+  }
+
+  .paragraph 
+  {
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 15px;
+    margin-right: 20px;
+    padding-left: 20px;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .btn:hover .paragraph 
+  {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s;
+  }
+
+
 .logorodape:hover
 {
   cursor: pointer;
@@ -430,6 +511,8 @@ section#rodape
     box-shadow: inset 0 0 .3rem #000050;
     background-color: #fff;
 }
+
+
 
 *::-webkit-scrollbar-thumb
 {
