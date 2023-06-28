@@ -165,7 +165,7 @@ section#cabecalho
 {
     display: flex;
     width: 370px;
-    height: 70%;
+    height: 80%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
