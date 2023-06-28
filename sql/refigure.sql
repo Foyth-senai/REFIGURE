@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27-Jun-2023 às 17:23
+-- Tempo de geração: 28-Jun-2023 às 17:25
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -51,7 +51,7 @@ CREATE TABLE `cadastro` (
 
 INSERT INTO `cadastro` (`id_cliente`, `nome_cliente`, `cpf_cliente`, `email_cliente`, `celular_cliente`, `senha_cliente`, `admin`, `logado`, `rua`, `numero_local`, `complementos`, `cidade`, `estado`, `pais`, `bairro`) VALUES
 (1, 'Jônatas Rocha dos Santos', '113.719.458-13', 'jonatasarcaro943@gmail.com', '47 98919-0438', '12341234', 1, 0, '', 0, '', '', '', '', ''),
-(2, 'Cauê Marchi Foyth', '125.413.329-12', 'foythcaue@gmail.com', '47 98823-0585', '12345678', 1, 1, 'Egon Tanner', 184, 'casa', 'Joinville', 'SC', 'Brasil', 'Petrópoils'),
+(2, 'Cauê Marchi Foyth', '125.413.329-12', 'foythcaue@gmail.com', '47 98823-0585', '12345678', 1, 0, 'Egon Tanner', 184, 'casa', 'Joinville', 'SC', 'Brasil', 'Petrópoils'),
 (3, 'Lucas Giovani Fruck', '071.524.669-04', 'lucas.f.giovani@gmail.com', '47 98908-0795', '87654321', 1, 0, '', 0, '', '', '', '', '');
 
 -- --------------------------------------------------------
@@ -66,7 +66,7 @@ CREATE TABLE `produtos` (
   `preco_produto` decimal(5,2) NOT NULL,
   `qtd_produto` int(100) NOT NULL,
   `carrinho` int(1) NOT NULL,
-  `preco_final` decimal(5,2) NOT NULL
+  `preco_final` decimal(20,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -74,7 +74,7 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`id_produto`, `nome_produto`, `preco_produto`, `qtd_produto`, `carrinho`, `preco_final`) VALUES
-(1, 'Urubu Preto e Branco', 70.00, 1, 0, 70.00),
+(1, 'Urubu Preto e Branco', 70.00, 99, 0, 6930.00),
 (2, 'Burguês Preto e Branco', 60.00, 1, 0, 60.00),
 (3, 'Capitão Picanha', 130.00, 1, 0, 130.00),
 (4, 'Mago Cósmico', 150.00, 1, 0, 150.00),
@@ -114,7 +114,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `cadastro`
 --
 ALTER TABLE `cadastro`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
