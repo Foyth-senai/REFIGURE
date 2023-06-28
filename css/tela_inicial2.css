@@ -92,6 +92,65 @@ i.menu-mobile
     left: 0;
 }
 
+#product
+{
+  width: 100%;
+  height: 85vh;
+}
+
+.outros1
+{
+ width: 200px;
+ height: 200px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-style: solid;
+ background-color: hsl(0, 0%, 50%, 50%);
+}
+
+.outros2
+{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    background-color: hsl(0, 0%, 50%, 50%);
+}
+
+.outros3
+{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    background-color: hsl(0, 0%, 50%, 50%);
+}
+
+.imagemprincipal
+{
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-style: solid;
+    border-top: 1;
+    background-color: hsl(0, 0%, 50%, 50%);
+}
+
+.esquerda
+{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
 .canto
 {
     display: flex;
@@ -174,9 +233,25 @@ i.menu-mobile
   height: 100%;
 }
 
+.reto
+{
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 @media (max-width: 1024px)
 {
+    .esquerda
+    {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
     #aside
     {
         left: -300;

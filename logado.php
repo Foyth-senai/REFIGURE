@@ -38,7 +38,7 @@ while ($linhas = $comando->fetch() )
                     <a class="nav-link" href="logado.php"><i class="bi bi-house"></i>Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php"><i class="bi bi-person"></i>Entrar</a>
+                    <a class="nav-link" href="conta.php"><i class="bi bi-person"></i>Conta</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="carrinho.php"><i class="bi bi-list-check"></i>Carrinho</a>

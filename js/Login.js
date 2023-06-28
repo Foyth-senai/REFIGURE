@@ -1,4 +1,4 @@
-function Logo1()
+function Logo()
 {
-  window.location.replace("logado.php")
+  window.location.replace("index.html")
 };
