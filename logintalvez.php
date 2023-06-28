@@ -73,7 +73,7 @@ include("conecta.php");
             <div class="container">
 	<div class="screen">
 		<div class="screen__content">
-			<form action="login.php" method="post" class="login">
+			<form action="logintalvez.php" method="post" class="login">
             <H1>Login</H1>
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>

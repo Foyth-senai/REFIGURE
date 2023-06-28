@@ -92,14 +92,14 @@ $total = 0;
                     </table>
                 </div>
                 <div class="alinharentrega mt-4">
-        <div class="entrega"><b>Entrega</b> <br>
+        <div class="entrega d-none"><b>Entrega</b> <br>
             <form action=""> 
                 <div class="styleinput"><input type="number" placeholder="000000.000"></div>
                 <div class="styleinput1"><input type="submit" value="Calcular"></div>
             </form>
                 <h3 class="fs-4">Saiba se você tem Frete Gratis &nbsp; <i class="bi bi-truck"></i></h3>
         </div>
-        <div class="aplicar"><b>Aplicar código de cupom</b> <br>
+        <div class="aplicar d-none"><b>Aplicar código de cupom</b> <br>
             <form action="">
                 <div class="styleinput"><input type="text" placeholder="Cupom"></div>
                 <div class="styleinput1"><input type="submit" value="Aplicar"></div>

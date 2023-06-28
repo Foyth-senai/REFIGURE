@@ -1,16 +1,23 @@
 <?php
 session_start();
+include("conecta.php");
 $logado = $_SESSION["logado"];
 include("conecta.php");
 $comando = $pdo->prepare("SELECT * FROM cadastro WHERE email_cliente = '$logado'");
 $resultado = $comando->execute();
 $logado = 0;
+$admpage = "none";
 while ($linhas = $comando->fetch() )
      {
          $logado = $linhas["logado"]; // Nome da coluna XAMPP
+         $n = 1;
+         $admin = $linhas["admin"];
+         
+
      }
-     include("conecta.php");
-?>
+     if($admin == 1){
+      $admpage = "fixed";
+    } ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,6 +32,35 @@ while ($linhas = $comando->fetch() )
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="icon" href="imagem/RE FIGURE.png">
 </head>
+<style>
+  .adm {
+  display: <?php echo $admpage ?>;
+  width: fit-content;
+  min-width: 100px;
+  height: 35px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2.5px solid hwb(165 61% 34%, 50%);
+  box-shadow: 0px 0px 20px -20px;
+  cursor: pointer;
+  background-color: hsl(120, 64%, 47%, 50%);;
+  transition: all 0.2s ease-in-out 0ms;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: small;
+  margin-left: 5%;
+}
+
+.adm:hover {
+  background-color: #F2F2F2;
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.adm:active {
+  transform: scale(0.95);
+}
+
+</style>
 <body>
     
 <section id="cabecalho" class="cabecalho alinhamento m-0 p-0">
@@ -67,10 +103,11 @@ while ($linhas = $comando->fetch() )
                  $cidade = $linhas["cidade"]; // Nome da coluna XAMPP
                  $pais = $linhas["pais"]; // Nome da coluna XAMPP
                  $bairro = $linhas["bairro"]; // Nome da coluna XAMPP
+                 $admin = $linhas["admin"]; // Nome da coluna XAMPP
 
              }?>
 
-<div class="informacao">
+<div class="informacao mt-5">
     <form class="area" method="post">
         <div class="minhaconta"><h1 ><ion-icon class="icone" name="person-circle-outline"></ion-icon><b>Minha Conta</b></h1></div>
         <div class="informacoes">
@@ -82,8 +119,11 @@ while ($linhas = $comando->fetch() )
         <button class="btn1" name="editar"><b>Editar</b></button>
         <br>
         <button class="btn1" name="senha"><b>Mudar Senha</b></button>
+          <br>
+        <button class="adm" name="adminp"><b>Admin</b></button>
         </div>
-        <?php 
+        <?php
+
           if(isset($_POST["editar"]) )
           {
             header("Location:editar.php");
@@ -91,6 +131,10 @@ while ($linhas = $comando->fetch() )
           if(isset($_POST["senha"]) )
           {
             header("Location:senha.php");
+          }
+          if(isset($_POST["adminp"]) )
+          {
+            header("Location:adm_page.html");
           }
         ?>
         <br> <br> <br>

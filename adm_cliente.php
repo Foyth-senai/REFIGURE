@@ -85,7 +85,7 @@ include("conecta.php");
                 <td><?php echo($email); ?></td>
                 <td><?php echo($celular); ?></td>
                 <td class="ultimacoluna"> 
-                    <a href=""><button class="btn">Editar</button></a> 
+                    <a href="editarcliente.php"><button class="btn">Editar</button></a> 
                     <a href=""><button class="btn">Excluir</button></a> 
                 </td>
                 </tr>

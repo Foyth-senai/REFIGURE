@@ -24,7 +24,7 @@ include("conecta.php");
     </div>
     <div class="loginmeio">
         <img class="fundo" src="imagem/fundo.png">
-        <form action="logina.php" method="post">
+        <form action="login.php" method="post">
             <div class="login">
                 <h2 class="logintitulo"><ion-icon class="icones" name="log-in-outline"></ion-icon>Login</h2>
                 <div class="loginbox">

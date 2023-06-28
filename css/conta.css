@@ -6,6 +6,9 @@ body
     overflow-x: hidden;
 }
 
+.errado{
+  display: none;
+}
 
 /* botão usado para voltar para a página principal do nosso site */
 .botaovoltar
@@ -17,6 +20,7 @@ body
 {
     scale: 100%;
     transition: all 0.3s ease-out;
+    cursor: pointer;
 }
 
 .nome
