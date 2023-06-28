@@ -7,29 +7,20 @@ include("conecta.php");
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
-    <title>Re:Figure</title>
+    <title>RE:Figure</title>
+    <link rel="stylesheet" type="text/css" href="css/logina.css">
     <link rel="icon" href="imagem/RE FIGURE.png">
-    <link rel="stylesheet" type="text/css" href="./css/login2.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
-    
-<section id="cabecalho" class="cabecalho alinhamento m-0 p-0">
-
-    <div class="cantologo col-md-4 d-flex justify-content-start align-itens-center text-align-center">
-
-        <img class="logo" id="logo" onclick="Logo()" src="imagem/RE FIGURE.png">
-
-    </div>
-    <div class="nome canto col-md-4">
-        <b>Re:Figure <i class="bi bi-tree"></i></b>
-    </div>  
-    <div class="canto col-md-4 justify-content-end align-itens-center text-align-center">
-
+    <div class="cabecalho">
+        <a href="index.html"><h3><ion-icon class="back" name="arrow-back-circle-outline"></ion-icon></h3></a>
+        <a href="index.html">
+        <img class="logo" src="imagem/RE FIGURE.png"></a>
+        <h1 class="refi">RE:Figure</h1>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     </div>
     <div class="loginmeio">
         <img class="fundo" src="imagem/fundo.png">
