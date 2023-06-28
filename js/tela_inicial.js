@@ -12,6 +12,10 @@ function Conta()
 {
   window.location.replace("conta.php")
 };
+function adm()
+{
+  window.location.replace("adm_page.html")
+};
 
 function Logo1()
 {
