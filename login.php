@@ -31,61 +31,26 @@ include("conecta.php");
     <div class="canto col-md-4 justify-content-end align-itens-center text-align-center">
 
     </div>
-
-</section>
-
-<main id="main">
-    
-    <section id="logar">
-        <div class="container">
-            <div class="cresce row">
-                <form class="login col-md-12" action="login.php" method="post"> 
-                    <div class="row b321">
-                        <div class="col-md-12">
-                            <h2 class="logintitulo"><ion-icon class="icones" name="log-in-outline"></ion-icon>Login</h2>
-                        </div>
-                    </div>
-                    <div class="row b321">
-                        <div class="col-md-12">
-                            <div class="loginbox">
-                                <span> <ion-icon class="imgs" name="mail-outline"></ion-icon><b>Email</b></span>
-                                <input type="email" name="confirmar_email" class="formatar" placeholder ="Coloque seu email">      
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row b321">
-                        <div class="col-md-12">
-                            <div class="loginbox">
-                                <span><ion-icon class="imgs" name="lock-closed-outline"></ion-icon><b>Senha</b></span>
-                                <input type="password" name="confirmar_senha" class="formatar" placeholder="Coloque sua senha">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row b321">
-                        <div class="col-md-12">
-                            <a class="esqueceu" href="senhaEsqueceu.php"><b>Esqueceu sua senha?</b></a>
-                        </div>
-                    </div>
-                    <div class="row b321">
-                        <div class="col-md-12">
-                        <a class="conta" href="Cadastro.html"><b>Não tem conta?</b></a>
-                        </div>
-                    </div>
-                    <div class="row b321">
-                        <div class="b321 col-md-12">
-                            <button name="entrar" type="submit" class="entrarbotao" onclick="exibeAlert()">Entrar</button>
-                        </div>
-</form>
+    <div class="loginmeio">
+        <img class="fundo" src="imagem/fundo.png">
+        <form action="logina.php" method="post">
+            <div class="login">
+                <h2 class="logintitulo"><ion-icon class="icones" name="log-in-outline"></ion-icon>Login</h2>
+                <div class="loginbox">
+                    <span> <ion-icon class="imgs" name="mail-outline"></ion-icon><b>Email</b></span>
+                    <input type="email" name="confirmar_email" class="formatar" placeholder ="Coloque seu email">      
                 </div>
+                <div class="loginbox">
+                    <span><ion-icon class="imgs" name="lock-closed-outline"></ion-icon><b>Senha</b></span>
+                    <input type="password" name="confirmar_senha" class="formatar" placeholder="Coloque sua senha">
+                </div>
+                <a class="esqueceu" href="senhaEsqueceu.php"><b>Esqueceu sua senha?</b></a>
+                <a class="conta" href="Cadastro.html"><b>Não tem conta?</b></a>
+                <button name="entrar" type="submit" class="entrarbotao" onclick="exibeAlert()">Entrar</button>
             </div>
-        </div>
-    </section>
-
-</main>
-
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/login.js"></script>
+        </form>
+    </div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>    
 </body>
 </html>
 
