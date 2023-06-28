@@ -1,15 +1,6 @@
 <?php
-session_start();
-$logado = $_SESSION["logado"];
+
 include("conecta.php");
-$comando = $pdo->prepare("SELECT * FROM cadastro WHERE email_cliente = '$logado'");
-$resultado = $comando->execute();
-$logado = 0;
-while ($linhas = $comando->fetch() )
-     {
-         $logado = $linhas["logado"]; // Nome da coluna XAMPP
-     }
-     include("conecta.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -35,7 +26,7 @@ while ($linhas = $comando->fetch() )
     </div>
 
 <div class="informacao">
-    <form class="area" action="senha.php" method="post">
+    <form class="area" action="senhaEsqueceu.php" method="post">
         <div class="minhaconta"><h1 ><ion-icon class="icone" name="person-circle-outline"></ion-icon><b>Alterar senha</b></h1></div>
         <div class="informacoes">
         <h2><b>Insira o seu CPF e altere sua senha</b></h2>
@@ -55,11 +46,10 @@ while ($linhas = $comando->fetch() )
        if(isset($_POST["editar"]) )
        {
           $cpf_alterar = $_POST["cpf_alterar"];
-          $senha_antiga = $_POST["senha_antiga"];
           $senha_nova = $_POST["senha_nova"];
            $comando = $pdo->prepare("UPDATE cadastro SET senha_cliente='$senha_nova' WHERE cpf_cliente='$cpf_alterar'");
            $resultado = $comando->execute();
-           header("Location:conta.php");
+           header("Location:login.php");
 
        }
     ?>   

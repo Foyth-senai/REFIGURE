@@ -117,19 +117,21 @@ while ($linhas = $comando->fetch() )
                 <li>8cm de altura.</li>
             </ul>
         </div>
+        <FORm action="compraUrubu.php" method="post">
+        <input placeholder="Quantidade" value="1" name="quantidade" class="input-style" type="number" min="1" max="100">
         <div class="compr">
             <div class="preco">
                 <div class="avista"><ion-icon name="cash-outline"></ion-icon><div class="formatarvalor"><h1>a partir de</h1><h2>R$70,00</h2><h3>a vista 10% de desconto</h3></div></div>
                 <div class="parcelado"><ion-icon name="card-outline"></ion-icon><div class="formatarvalor"><h4>R$77,00</h4><h5>em até 6x de R$ 13,00 sem juros no cartão</h5></div></div>
             </div>
         <div class="comp">
-        <FORm action="compraUrubu.php" method="post"><button type="submit" class="comprar" name="comprar">Comprar</button></FORM>
+        <button type="submit" class="comprar" name="comprar">ADD ao carrinho</button></FORM>
         <?php
-            
             // Se clicou no botão comprar:
             if(isset($_POST["comprar"]) )
             {
-                $comando = $pdo->prepare("UPDATE produtos SET carrinho=1 WHERE id_produto = 1;");
+                $quantidade = $_POST["quantidade"];
+                $comando = $pdo->prepare("UPDATE produtos SET carrinho=1, qtd_produto='$quantidade' WHERE id_produto = 1;");
                 $resultado = $comando->execute();
                 ?><script>window.location.replace("carrinho.php");</script><?php
             }
