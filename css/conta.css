@@ -551,6 +551,13 @@ section#rodape
     border: solid 1px;
 }
 
+@media screen and (max-width: 1025px)
+{
+    .botoesalterar
+    {
+        margin-left: 100px;
+    }
+  }
 @media screen and (max-width: 1000px)
 {
     .botoesalterar
