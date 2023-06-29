@@ -120,7 +120,7 @@ $entrega = number_format($entrega2, 2, ',', ' ');
                 <div class="resumo"><b>Resumo do Pedido</b></div>
                 <div class="subtotal">
                     <div class="sub">Subtotal</div>
-                    <div class="valor1">R$:<?php echo($preco_final); ?></div>
+                    <div class="valor1">R$:<?php echo($final2); ?></div>
                 </div>
                 <div class="entrega1">
                     <div class="entr">Entrega</div>
