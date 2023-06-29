@@ -24,13 +24,6 @@ include("conecta.php");
                 </a>
               
             </li>
-            <li class="has-subnav">
-                <a href="adm_produto.html">
-                    <i class="icon icon-file-text icon-text"></i>
-                    <span class="menu-texto">Produtos <ion-icon name="pricetags-outline"></ion-icon></span>
-                </a>
-                
-            </li>
             
             <li class="has-subnav">
                 <a href="adm_cliente.php">
