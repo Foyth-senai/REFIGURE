@@ -90,9 +90,10 @@ $entrega = number_format($entrega2, 2, ',', ' ');
                                 // }
             }
 
-            $final2 = $final2 + 10;
-            if($final2==10){
+            $total = $final2 + 10.0;
+            if($total==10){
                 $final2 = 0;
+                $total = 0;
                 $entrega = 0;
             }    
             $total = number_format($final2, 2, ',', ' ');
@@ -118,13 +119,13 @@ $entrega = number_format($entrega2, 2, ',', ' ');
             <div class="col-md-4">
             <div class="tabela2">
                 <div class="resumo"><b>Resumo do Pedido</b></div>
-                <div class="subtotal">
+                <!-- <div class="subtotal">
                     <div class="sub">Subtotal</div>
-                    <div class="valor1">R$:<?php echo($final2); ?></div>
-                </div>
+                    <div class="valor1">R$:</div>
+                </div> -->
                 <div class="entrega1">
                     <div class="entr">Entrega</div>
-                    <div class="valor2">R$:<?php echo($entrega); ?></div>
+                    <div class="valor2">R$:0,00</div>
                 </div>
                 <div class="total2">
                     <div class="tot">Total</div>

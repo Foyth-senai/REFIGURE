@@ -18,6 +18,10 @@ function carrinho()
   window.location.replace("carrinho.php")
 };
 
+function suporte()
+{
+  window.location.replace("suporte.html")
+};
 
 function ValidarCPF()
     {

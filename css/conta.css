@@ -560,7 +560,7 @@ section#rodape
     .botoesalterar .btn1
     {
         height: 50px;
-        margin-left: 20px;
+        width: 25%;
     }
     .enderecotitulo .btn2
     {
