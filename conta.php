@@ -37,7 +37,7 @@ while ($linhas = $comando->fetch() )
   display: <?php echo $admpage ?>;
   width: fit-content;
   min-width: 100px;
-  height: 35px;
+  height: 50px;
   padding: 8px;
   border-radius: 5px;
   border: 2.5px solid hwb(165 61% 34%, 50%);
@@ -153,6 +153,17 @@ while ($linhas = $comando->fetch() )
             header("Location:enderecos.php");
           }
         ?>
+        <br>
+        <button class="sair" name="sair" o><b>Sair</b></button>
+        <?php 
+          if(isset($_POST["sair"]) )
+          {
+            $comando = $pdo->prepare("UPDATE cadastro SET logado=0");
+            $resultado = $comando->execute();
+              header("Location:index.html");
+          }
+        ?>
+
         <br>
         <div class="meuspedidostitulo"><ion-icon class="icone" name="list-outline"></ion-icon><b>Meus Pedidos</b></div>
         <br>

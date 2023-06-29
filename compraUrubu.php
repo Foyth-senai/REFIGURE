@@ -169,7 +169,7 @@ while ($linhas = $comando->fetch() )
         <button type="submit" class="comprarr" name="comprar">Adicionar ao carrinho</button></FORM>
         <?php
             // Se clicou no botão comprar:
-            if(isset($_POST["comprarr"]) )
+            if(isset($_POST["comprar"]) )
             {
                 $quantidade = $_POST["quantidade"];
                 $comando = $pdo->prepare("UPDATE produtos SET carrinho=1, qtd_produto='$quantidade' WHERE id_produto = 1;");

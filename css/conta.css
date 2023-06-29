@@ -182,7 +182,7 @@ section#cabecalho
 .btn1 {
     width: fit-content;
     min-width: 100px;
-    height: 35px;
+    height: 50px;
     padding: 8px;
     border-radius: 5px;
     border: 2.5px solid hwb(165 61% 34%, 50%);
@@ -229,6 +229,32 @@ section#cabecalho
   }
   
   .btn2:active {
+    transform: scale(0.95);
+  }
+
+  .sair {
+    width: fit-content;
+    min-width: 100px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2.5px solid hwb(165 61% 34%, 50%);
+    box-shadow: 0px 0px 20px -20px;
+    cursor: pointer;
+    background-color: hsla(0, 64%, 47%, 0.5);;
+    transition: all 0.2s ease-in-out 0ms;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    margin-left: 5%;
+  }
+  
+  .sair:hover {
+    background-color: #F2F2F2;
+    box-shadow: 0px 0px 20px -18px;
+  }
+  
+  .sair:active {
     transform: scale(0.95);
   }
 
