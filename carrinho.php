@@ -1,6 +1,10 @@
 <?php
 include("conecta.php");
 $total = 0;
+$final2 =0;
+$entrega2 = 10;
+$preco_final = 0;
+$entrega = number_format($entrega2, 2, ',', ' ');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -66,9 +70,7 @@ $total = 0;
 
                  $pqtd2 = $pdo->query("SELECT SUM(preco_final) FROM produtos where carrinho = 1;");
                  $final2 = $pqtd2->fetchColumn();
-                 
-                 $total = number_format($final2, 2, ',', ' ');
-                ?>
+             ?>
                 <tr class="giovani">
                 <td class="prime"><?php echo ('<img class="img" src="imagem/'.$nome.'.png" >'); echo($nome);?></td>
                 <td class="segu"><p>R$<?php echo($preco); ?></p></td>
@@ -86,8 +88,14 @@ $total = 0;
                                 //         header("Location:carrinho.php");
                                 //     }
                                 // }
-            }   
-            
+            }
+
+            $final2 = $final2 + 10;
+            if($final2==10){
+                $final2 = 0;
+                $entrega = 0;
+            }    
+            $total = number_format($final2, 2, ',', ' ');
             ?> 
                     </table>
                 </div>
@@ -112,23 +120,22 @@ $total = 0;
                 <div class="resumo"><b>Resumo do Pedido</b></div>
                 <div class="subtotal">
                     <div class="sub">Subtotal</div>
-                    <div class="valor1">R$:0,00</div>
+                    <div class="valor1">R$:<?php echo($preco_final); ?></div>
                 </div>
                 <div class="entrega1">
                     <div class="entr">Entrega</div>
-                    <div class="valor2">R$:0,00</div>
+                    <div class="valor2">R$:<?php echo($entrega); ?></div>
                 </div>
                 <div class="total2">
                     <div class="tot">Total</div>
                     <div class="valor3">
-                        <div class="valor4">R$:0,00</div>
                         <div class="valor5">R$<?php echo($total); ?></div>
                     </div>
                 </div>
             </div>
             <div class="finalizar">
-                <div class="adicionarmais"><input type="submit" value="Adicionar mais produtos"></div>
-                <div class="fecharpedido"><input type="submit" value="Fechar Pedido"></div>
+                <div class="adicionarmais"><input type="submit" onclick="Logo1()" value="Adicionar mais produtos"></div>
+                <div class="fecharpedido"><input type="submit" onclick="pagamento()" value="Fechar Pedido"></div>
             </div>
             </div>
         </div>

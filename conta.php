@@ -165,40 +165,7 @@ while ($linhas = $comando->fetch() )
         ?>
 
         <br>
-        <div class="meuspedidostitulo"><ion-icon class="icone" name="list-outline"></ion-icon><b>Meus Pedidos</b></div>
-        <br>
-        <table class="tabela">
-        <tr>
-            <td><b>#</b></td>
-            <td><b>Data</b></td>
-            <td><b>Método</b></td>
-            <td><b>Valor Total</b></td>   
-            <td><b>Status</b></td>
-        </tr>
-
-        <tr>
-            <td>(id)</td>
-            <td>(Data e Hora)</td>
-            <td>(Método de Pagamento)</td>
-            <td>(R$ 000,00)</td>   
-            <td>Enviado</td>
-        </tr>
-        <tr>
-            <td>(id)</td>
-            <td>(Data e Hora)</td>
-            <td>(Método de Pagamento)</td>
-            <td>(R$ 000,00)</td>   
-            <td>Entrege</td>
-        </tr>
-        <tr>
-            <td>(id)</td>
-            <td>(Data e Hora)</td>
-            <td>(Método de Pagamento)</td>
-            <td>(R$ 000,00)</td>   
-            <td>Cancelado</td>
-        </tr>
-    </table>
-    <div class="invisivel"></div>
+        
     </form>
 </div>
 

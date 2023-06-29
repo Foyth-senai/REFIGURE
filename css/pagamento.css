@@ -124,6 +124,38 @@ section#cabecalho {
   display: flex;
 }
 
+.btn2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 100px;
+  height: 35px;
+  padding: 8px;
+  align-items: center;
+  border-radius: 5px;
+  border: 2.5px solid hwb(165 61% 34%, 50%);
+  box-shadow: 0px 0px 20px -20px;
+  cursor: pointer;
+  background-color: hsla(120, 64%, 47%, 0.5);
+  transition: all 0.2s ease-in-out 0ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-family: "Poppins", sans-serif;
+  margin-left: 2%;
+  margin-top: 0.5%;
+  font-size: small;
+  display: flex;
+}
+
+.btn2:hover {
+  background-color: #F2F2F2;
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.btn2:active {
+  transform: scale(0.95);
+}
+
 .billing {
   margin-top: 36px;
   padding: 0 10px;
@@ -268,6 +300,7 @@ h2 {
   .iphoneWrapper {
     background: #ffffff;
     border-radius: 2px;
+    margin-top: 3%;
     box-shadow: 0px 30px 100px rgba(0, 0, 0, 0.35);
     height: 667px;
     left: 50%;
